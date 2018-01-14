@@ -7895,3 +7895,11 @@ Did you mean one of these?
 [stacktrace]
 #0 {main}
 "} 
+[2018-01-14 17:20:48] local.ERROR: Cannot declare class CreateRolesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateRolesTable, because the name is already in use at /home/leviathan/test-voyager/final-heroku-deploy/database/migrations/2016_10_21_190000_create_roles_table.php:33)
+[stacktrace]
+#0 {main}
+"} 
+[2018-01-14 17:23:37] local.ERROR: Cannot declare class CreateRolesTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateRolesTable, because the name is already in use at /home/leviathan/test-voyager/final-heroku-deploy/database/migrations/2016_10_21_190000_create_roles_table.php:33)
+[stacktrace]
+#0 {main}
+"} 
