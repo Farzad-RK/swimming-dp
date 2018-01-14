@@ -31,7 +31,7 @@ class APILoginController extends Controller
                $request->request->add([
                  'grant_type' => 'password',
                  'client_id' => 2,
-                 'client_secret' => "vSmGAjYO2e8p6B1Rv5iPKXF0txIrhoomFmxkPJGa",
+                 'client_secret' => "YMh5BO7DkXqy29zTkp3o2aUTIQOm91DN4IEx7TNk",
                  'scope' => 'read-swimmer create-result read-match',
                ]);
                 $tokenRequest = Request::create(
@@ -47,7 +47,7 @@ class APILoginController extends Controller
                 $request->request->add([
                 'grant_type' => 'password',
                 'client_id' => 2,
-                'client_secret' => "vSmGAjYO2e8p6B1Rv5iPKXF0txIrhoomFmxkPJGa",
+                'client_secret' => "YMh5BO7DkXqy29zTkp3o2aUTIQOm91DN4IEx7TNk",
                 'scope' => '*',
                 ]);
                 $tokenRequest = Request::create(
