@@ -22,6 +22,7 @@ class CoachController extends Controller
       $email =$_user->email;
       if($swimmer->team!=null){
         $team = Team::where('coach_id',$swimmer->id)->first();
+        $swimmer =$team->coach;
         $my_matches=$team->matches->load('type');;
         $team_members= Swimmer::where('team_id',$team->id)->get();
         $team = ['name'=>$team->name,
