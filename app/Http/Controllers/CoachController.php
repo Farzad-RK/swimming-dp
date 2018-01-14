@@ -25,17 +25,16 @@ class CoachController extends Controller
         $swimmer =$team->coach;
         $my_matches=$team->matches->load('type');;
         $team_members= Swimmer::where('team_id',$team->id)->get();
-        $team = ['name'=>$team->name,
-                 'coach'=>$team->coach,
-                 'members'=>$team_members
-        ];
+        $team_name =$team->name;
+        $coach_name =$team->coach->firstName." ".$team->coach->firstName;
+
       } else {
         $team = [];
         $my_matches=[];
       }
       $all_matches = Match::all()->load('type');
       $selected = 'selected';
-      return view('coach.dashboard',compact('team','swimmer','email','my_matches'));
+      return view('coach.dashboard',compact('team_name','swimmer','email','my_matches','coach_name','team_members'));
     }
   }
   public function update(Request $request){
