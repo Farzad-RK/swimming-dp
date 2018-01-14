@@ -17,10 +17,10 @@ class CreateMatchesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
-            $table->dateTime('startDate');
-            $table->dateTime('endDate');
-            $table->dateTime('regStartDate');
-            $table->dateTime('regEndDate');
+            $table->string('startDate');
+            $table->string('endDate');
+            $table->string('regStartDate');
+            $table->string('regEndDate');
             $table->string('place');
             $table->string('capacity');
             $table->string('gender');
