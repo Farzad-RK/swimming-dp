@@ -160,17 +160,17 @@
                         <div id="my-team-table">
                             <table class="w3-table" style="width: 90% ; margin: auto;">
                                 <tr style="border: 1px solid white;">
-                                    <td width="70%" class="peter-river w3-right-align w3-cen">{{$team->name}}</td>
+                                    <td width="70%" class="peter-river w3-right-align w3-cen">{{$team[0]}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام تیم</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
-                                    <td width="70%" class="peter-river w3-right-align">{{$team->coach_name}}</td>
+                                    <td width="70%" class="peter-river w3-right-align">{{$team[1]}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام سرمربی</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
                                         <ul class="w3-ul">
-                                          @foreach($team->members->all() as $member)
+                                          @foreach($team[2]->all() as $member)
                                           <li>{{$member->firstName}}&nbsp;{{$member->lastName}}</li>
                                         </ul>
                                           @endforeach
