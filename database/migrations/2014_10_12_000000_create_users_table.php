@@ -13,14 +13,14 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('app_users', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email')->unique();
             $table->string('password');
             $table->timestamps();
         });
 
-        Schema::table('app_users', function($table) {
+        Schema::table('users', function($table) {
             $table->softDeletes();
             $table->integer('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('app_roles');
@@ -34,6 +34,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_users');
+        Schema::dropIfExists('users');
     }
 }
