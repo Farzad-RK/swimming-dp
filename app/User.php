@@ -13,7 +13,7 @@ class User extends Authenticatable
   use SoftDeletes;
 
   protected $dates = ['deleted_at'];
-
+  protected $table = 'app_users';
    public function role(){
 
      return $this->belongsTo('App\Role','role_id');
