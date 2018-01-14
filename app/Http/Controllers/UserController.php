@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use App\Role;
+use App\AppRole;
 use App\Swimmer;
 use App\Coach;
 use Illuminate\Support\Facades\Auth;
@@ -84,7 +84,7 @@ class UserController extends Controller
        'fatherName' => 'required'
       ]);
     $password = $request->input('password');
-    $role = Role::where('name',$request->input('role'))->get();
+    $role = AppRole::where('name',$request->input('role'))->get();
     $role = $role[0];
     $user = new User();
     $user->email = $request->input('email');

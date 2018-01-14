@@ -16,7 +16,7 @@ class User extends Authenticatable
   protected $table = 'app_users';
    public function role(){
 
-     return $this->belongsTo('App\Role','role_id');
+     return $this->belongsTo('App\AppRole','role_id');
    }
 
    public static function getUser(User $user ){
