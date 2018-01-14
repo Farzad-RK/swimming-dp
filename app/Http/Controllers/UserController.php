@@ -106,7 +106,7 @@ class UserController extends Controller
         'fatherName' => $request->input('fatherName'),
         'user_id'=>$user->id
       ]);
-       Auth::attempt([$request->input('email'), 'password' => $password]);
+       Auth::attempt(['email' => $request->input('email'), 'password' => $password]);
        return redirect()->intended('swimmer/dashboard');
     } else if($role->name == 'coach'){
       Coach::create([
