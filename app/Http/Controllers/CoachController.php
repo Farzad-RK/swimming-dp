@@ -29,7 +29,7 @@ class CoachController extends Controller
                  'coach_name'=>$swimmer->name,
                  'members'=>$team_members
         ];
-      
+        return $team;
       } else {
         $team = [];
         $my_matches=[];
