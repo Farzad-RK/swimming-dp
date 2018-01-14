@@ -18,7 +18,7 @@ Route::post('/admin/login','AdminController@authenticate');
 Route::middleware('auth')->get('/admin/dashboard','AdminController@dashboard');
 //admin match routes
 Route::middleware('auth')->get('/admin/matches','MatchController@index');
-Route::middleware('auth')->post('/admin/matches/create','MatchController@index');
+Route::middleware('auth')->post('/admin/matches/create','MatchController@create');
 
 //admin matchType routes
 Route::middleware('auth')->get('/admin/matchtype','MatchTypeController@index');
@@ -39,3 +39,9 @@ Route::middleware('auth')->get('/coach/dashboard','CoachController@dashboard');
 Route::middleware('auth')->get('/coach/logout','CoachController@logout');
 Route::middleware('auth')->post('/coach/update','CoachController@update');
 Route::middleware('auth')->post('/coach/createteam','CoachController@createTeam');
+
+//main route
+Route::get('/' , function(){
+
+     return view('main.index');
+});

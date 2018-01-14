@@ -96,10 +96,11 @@
                 <li><a href="#">آیتم</a></li>
             </ul>
         </div>
-        <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px">
-
+        <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px;">
 
             <p class=" w3-center w3-show-inline-block w3-padding-ver-12  w3-medium">طراحی شده توسط گروه نرم افزاری شاهین، دانشگاه شهید چمران اهواز</p>
+            <p style="margin-top: 50px; padding: 10px;" dir="rtl" class=" ">تمام حقوق مادی و معنوی این سایت متعلق به گروه نرم افزاری شاهین می باشد و هرگونه کپی برداری پیگرد قانونی دارد.</p>
+
         </div>
     </div>
 

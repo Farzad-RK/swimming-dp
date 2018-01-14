@@ -51,41 +51,40 @@
         <div class="w3-col l1 m1 s1">&nbsp;</div>
         <div class="w3-col l10 m10 s12">
             <div class="w3-row ">
-                <div class="w3-col  w3-quarter  w3-right w3-hide-large w3-hide-medium" >
+              <div class="w3-col  w3-quarter  w3-right w3-hide-large w3-hide-medium" >
                     <ul style="margin: 0 30px 0 30px;">
                         <li id="selected11"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align border-right amethyst">
                             <!--<a href="#">-->
-                                <span>دوره های ارائه شده</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">دوره های ارائه شده</span> <i class="fa fa-book"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected22"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>دوره های من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">دوره های من</span> <i class="fa fa-book"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected33"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>تیم من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">تیم من</span> <i class="fa fa-group"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected44"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>مسابقات پیش رو</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">مسابقات پیش رو</span> <i class="fa fa-trophy"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected55"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>مسابقات من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">مسابقات من</span> <i class="fa fa-trophy"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected66"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>حساب کاربری</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" >حساب کاربری</span> <i class="fa fa-user"></i>
                             <!--</a>-->
                         </li>
                     </ul>
                 </div>
-
 
 
 
@@ -99,44 +98,36 @@
                     <ul>
                         <li id="selected1" class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align border-right amethyst">
                             <!--<a href="#">-->
-                                <span>دوره های ارائه شده</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right">دوره های ارائه شده</span> <i class="fa fa-book"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected2"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>دوره های من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" class="w3-margin-right" class="w3-margin-right">دوره های من</span> <i class="fa fa-book"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected3"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>تیم من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" class="w3-margin-right">تیم من</span> <i class="fa fa-group"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected4"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>مسابقات پیش رو</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" class="w3-margin-right">مسابقات پیش رو</span> <i class="fa fa-trophy"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected5"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>مسابقات من</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" class="w3-margin-right">مسابقات من</span> <i class="fa fa-trophy"></i>
                             <!--</a>-->
                         </li>
                         <li id="selected6"  class="w3-btn w3-btn-block w3-margin-bottom w3-padding-12 w3-round-small w3-right-align  amethyst">
                             <!--<a href="#">-->
-                                <span>حساب کاربری</span> <i class="fa fa-user"></i>
+                                <span class="w3-margin-right" class="w3-margin-right">حساب کاربری</span> <i class="fa fa-user"></i>
                             <!--</a>-->
                         </li>
                     </ul>
                 </div>
-
-
-
-
-
-
-
-
 
 
                 <div class=" w3-threequarter  w3-right-align w3-container ">
@@ -408,11 +399,12 @@
             <li><a href="#">آیتم</a></li>
         </ul>
     </div>
-    <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px">
+    <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px;">
 
+            <p class=" w3-center w3-show-inline-block w3-padding-ver-12  w3-medium">طراحی شده توسط گروه نرم افزاری شاهین، دانشگاه شهید چمران اهواز</p>
+            <p style="margin-top: 50px; padding: 10px;" dir="rtl" class=" ">تمام حقوق مادی و معنوی این سایت متعلق به گروه نرم افزاری شاهین می باشد و هرگونه کپی برداری پیگرد قانونی دارد.</p>
 
-        <p class=" w3-center w3-show-inline-block w3-padding-ver-12  w3-medium">طراحی شده توسط گروه نرم افزاری شاهین، دانشگاه شهید چمران اهواز</p>
-    </div>
+        </div>
 </div>
 
 

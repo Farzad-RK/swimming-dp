@@ -43,13 +43,13 @@ a{
   position: relative;
 }
 .item1{
-  background-image: url('../images/01.jpg');
+  background-image: url('../images/Picture11.jpg');
 }
 .item2{
-  background-image: url('../images/02.jpg');
+  background-image: url('../images/Picture22.jpg');
 }
 .item3{
-  background-image: url('../images/03.jpg');
+  background-image: url('../images/Picture33.jpg');
 }
 .back-img{
   /*background-image: url('../images/2.jpg');*/

@@ -23,7 +23,7 @@
         <a href="teams-management.html" class=" w3-hover-none">مدیریت تیم ها</a>
         <a href="teachers-management.html" class=" w3-hover-none">مدیریت مدرسان</a>
         <a href="refrees-management.html" class=" w3-hover-none">مدیریت داوران</a>
-        <a href="competitions-list.html" class=" w3-hover-none">مدیریت مسابقات</a>
+        <a href="/admin/matches" class=" w3-hover-none">مدیریت مسابقات</a>
         <a href="courses-list.html" class=" w3-hover-none">مدیریت دوره های آموزشی</a>
         <a href="index.html" class=" w3-hover-none">صفحه ی اصلی</a>
         <a href="/admin/logout" class=" w3-hover-none">خروج</a>
@@ -48,8 +48,8 @@
                 <div class="item holder item1 w3-card-16 w3-round-medium ">
                     <div class=" shell ">
                         <p class="card">
-                            <span class="w3-btn btn-2 w3-round">لیست مسابقات</span>
-                            <span class="w3-btn btn-1 w3-round">اضافه کردن مسابقه</span>
+                            <a href="/admin/matches"><span class="w3-btn btn-2 w3-round">لیست مسابقات</span></a>
+                            <a href="/admin/matches"><span class="w3-btn btn-1 w3-round">اضافه کردن مسابقه</span></a>
                         </p>
                     </div>
                     <div class="icon-holder">
@@ -136,11 +136,12 @@
                     <li><a href="#">آیتم</a></li>
                 </ul>
             </div>
-            <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px">
+            <div class="w3-col l8 s12 w3-right  w3-center " style="padding-top: 50px;">
 
+            <p class=" w3-center w3-show-inline-block w3-padding-ver-12  w3-medium">طراحی شده توسط گروه نرم افزاری شاهین، دانشگاه شهید چمران اهواز</p>
+            <p style="margin-top: 50px; padding: 10px;" dir="rtl" class=" ">تمام حقوق مادی و معنوی این سایت متعلق به گروه نرم افزاری شاهین می باشد و هرگونه کپی برداری پیگرد قانونی دارد.</p>
 
-                <p class=" w3-center w3-show-inline-block w3-padding-ver-12  w3-medium">طراحی شده توسط گروه نرم افزاری شاهین، دانشگاه شهید چمران اهواز</p>
-            </div>
+        </div>
         </div>
 
 
