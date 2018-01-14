@@ -23,7 +23,7 @@ class CoachController extends Controller
         $team = $swimmer->team;
         $my_matches=$team->matches->load('type');;
         $coach = $team->coach;
-        $team_members= Swimmer::where('team_id',$team->id)->get;
+        $team_members= Swimmer::where('team_id',$team->id)->get();
         $team = ['name'=>$team->name,
                  'coach_name'=>$coach,
                  'members'=>$team_members
