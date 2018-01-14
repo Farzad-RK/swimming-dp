@@ -10,6 +10,7 @@ use App\User;
 use App\Match;
 use App\Coach;
 use App\Swimmer;
+use App\Team;
 class CoachController extends Controller
 {
 
@@ -20,7 +21,7 @@ class CoachController extends Controller
       $swimmer = User::getUser($_user);
       $email =$_user->email;
       if($swimmer->team!=null){
-        $team = App\Team::where('coach_id',$swimmer->id)->first();
+        $team = Team::where('coach_id',$swimmer->id)->first();
         $my_matches=$team->matches->load('type');;
         $coach = $team->coach;
         $team_members= Swimmer::where('team_id',$team->id)->get();
