@@ -111,7 +111,7 @@ class MatchController extends Controller
            }else {
                for($i=0;count($selected_refrees)>$i;$i++ ){
                    $m = new MatchRefree();
-                   $m->lineNumber = (string) (mt_rand(1,8));
+                   $m->lineNumber = "1";
                    $m->refree_id = $selected_refrees[$i];
                    $m->match_id = $request->input('id');
                    $m->save();
