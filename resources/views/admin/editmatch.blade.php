@@ -89,7 +89,7 @@
                     <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
                             <select class="w3-select" required name="type"  style="width: 50%;">
                                 @foreach ($types->all() as $type)
-                                    @if(in_array($type, $match->$type))
+                                    @if($match->type->id == $type->id)
                                     <option selected value={{$type->id}}>{{$type->age}}&nbsp;{{$type->name}}</option>
                                     @else
                                     <option value={{$type->id}}>{{$type->age}}&nbsp;{{$type->name}}</option>
