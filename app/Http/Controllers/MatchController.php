@@ -106,12 +106,12 @@ class MatchController extends Controller
 
            if(count($selected_refrees)==0){
 
+               return ['not'=>'found'];
 
            }else {
                foreach ($selected_refrees as $selected){
-
                    $m = new MatchRefree();
-                   $m->lineNumber = str(mt_rand(1,8));
+                   $m->lineNumber = (string) (mt_rand(1,8));
                    $m->refree_id =$selected;
                    $m->match_id =$request->input('id');
                    $m->save();
