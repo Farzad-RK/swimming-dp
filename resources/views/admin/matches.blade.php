@@ -235,31 +235,31 @@
               <ul id="myUL" class="w3-ul w3-card-16 w3-show-inline-block" style="width:90%">
                   <li class="w3-row  w3-center midnight-blue w3-hide-small ">
                       <!--header-->
-                      <div class="w3-col l2 m2 w3-container w3-right"><p>نام مسابقه</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>تاریخ شروع</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>تاریخ پایان</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>تاریخ شروع ثبت نام</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>تاریخ پایان ثبت نام</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>نام ماده</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>رده سنی</p></div>
-                      <div class="w3-col l2 m2 w3-container w3-right"><p>محل برگزاری مسابقه</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>جنسیت</p></div>
-                      <div class="w3-col l1 m1 w3-container w3-right"><p>هزینه</p></div>
+                      <div class="w3-col l2 m2 w3-container w3-right w3-small"><p>نام مسابقه</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>تاریخ شروع</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>تاریخ پایان</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>تاریخ شروع ثبت نام</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>تاریخ پایان ثبت نام</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>نام ماده</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>رده سنی</p></div>
+                      <div class="w3-col l2 m2 w3-container w3-right w3-small"><p>محل برگزاری مسابقه</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>جنسیت</p></div>
+                      <div class="w3-col l1 m1 w3-container w3-right w3-small"><p>هزینه</p></div>
                   </li>
                   <!--end header-->
                  @foreach($matches->all() as $match)
                   <a href="competitions-edit.html">
                       <li class="w3-row  w3-center hover-peter " >
-                          <div class="w3-col l2 m2 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>نام ماده: </span>{{$match->name}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->startDate}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->endDate}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->regStartDate}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->regEndDate}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->type->name}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->type->age}}</p></div>
-                          <div class="w3-col l2 m2 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>نام ماده: </span>{{$match->place}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->gender}}</p></div>
-                          <div class="w3-col l1 m1 w3-container w3-right"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->registrationCost}}</p></div>
+                          <div class="w3-col l2 m2 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>نام مسابقه: </span>{{$match->name}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>تاریخ شروع: </span>{{$match->startDate}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>تاریخ پایان: ‍‍</span>{{$match->endDate}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>تاریخ شروع ثبت نام: </span>{{$match->regStartDate}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>تاریخ پایان ثبت نام‌: </span>{{$match->regEndDate}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>نام ماده: </span>{{$match->type->name}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>رده سنی: </span>{{$match->type->age}}</p></div>
+                          <div class="w3-col l2 m2 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>محل برگزاری:‌ </span>{{$match->place}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>جنسیت: </span>{{$match->gender}}</p></div>
+                          <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>هزینه: </span>{{$match->registrationCost}}</p></div>
                       </li>
                   </a>
                 @endforeach
