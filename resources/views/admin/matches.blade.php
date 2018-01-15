@@ -248,7 +248,7 @@
                   </li>
                   <!--end header-->
                  @foreach($matches->all() as $match)
-                  <a href="/admin/match/edit/{{$match->id}}">
+                  <a href="/admin/match/{{$match->id}}">
                       <li class="w3-row  w3-center hover-peter " >
                           <div class="w3-col l2 m2 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>نام مسابقه: </span>{{$match->name}}</p></div>
                           <div class="w3-col l1 m1 w3-container w3-right w3-small"><p><span class=' w3-hide-large w3-hide-medium'>تاریخ شروع: </span>{{$match->startDate}}</p></div>
