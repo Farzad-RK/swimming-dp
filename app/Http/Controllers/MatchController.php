@@ -91,6 +91,9 @@ class MatchController extends Controller
                'regEndDate'=>'required',
                'regCost'=>'required',
                'type'=>'required',
+               'gender'=>'required',
+               'capacity'=>'required',
+               'place'=>'required'
            ]);
            $id = $request->input('id');
            $match = Match::find($id);
@@ -102,6 +105,7 @@ class MatchController extends Controller
            $match->place = $request->input('place');
            $match->capacity= $request->input('capacity');
            $match->gender= $request->input('gender');
+           $match->type_id =$request->input('type');
            $match->save();
            return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
        }
