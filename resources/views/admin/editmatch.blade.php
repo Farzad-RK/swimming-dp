@@ -61,6 +61,7 @@
 
             <ul id="myUL" class="w3-ul w3-card-16 midnight-blue w3-show-inline-block" style="width:90%">
                 <form method="post" action="/admin/matches/update">
+                    {{ csrf_field() }}
                     <input hidden name="id" type="text" value={{$match->id}}>
                 <li class="w3-row  w3-center  " >
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام مسابقه: </span><input name="name" value="{{$match->name}}" autofocus type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>

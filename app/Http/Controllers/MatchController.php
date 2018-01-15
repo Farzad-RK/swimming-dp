@@ -108,7 +108,7 @@ class MatchController extends Controller
            $match->gender= $request->input('gender');
            $match->type_id =$request->input('type');
            $match->save();
-           return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
+          // return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
        }
    }
 }
