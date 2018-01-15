@@ -78,7 +78,7 @@
                             </select>
                              @else
                                 <span  class='w3-right my-input w3-text-white '>جنسیت: </span>
-                                <select  name="gender" class="w3-select w3-text-white" id="">
+                                <select  name="gender" class="w3-select my-input w3-text-white" id="">
                                     <option class="w3-text-white" value="مرد">مرد</option>
                                     <option selected value="زن">زن</option>
                                 </select>
@@ -87,7 +87,8 @@
                         </p>
                     </div>
                     <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
-                            <select class="w3-select" required name="type"  style="width: 50%;">
+                            <span  class='w3-right'>ماده: </span>
+                            <select class="w3-select w3-text-white my-input" required name="type"  style="width: 100%;">
                                 @foreach ($types->all() as $type)
                                     @if($match->type->id == $type->id)
                                     <option selected value={{$type->id}}>{{$type->age}}&nbsp;{{$type->name}}</option>
