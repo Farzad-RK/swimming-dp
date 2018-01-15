@@ -71,17 +71,17 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام ماده: </span><input name="typeName" value="{{$match->type->name}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>رده سنی: </span><input name="typeAge" value="{{$match->type->age}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>محل برگزاری: </span><input name="place" value="{{$match->place}}"  type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl">
+                    <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
                             @if($match->gender=='مرد')
                             <span  class='w3-right '>جنسیت: </span>
                             <select name="gender" class="w3-select my-input " id="">
-                                <option  selected value="مرد">مرد</option>
+                                <option class="w3-text-white"  selected value="مرد">مرد</option>
                                 <option value="زن">زن</option>
                             </select>
                              @else
                                 <span  class='w3-right my-input '>جنسیت: </span>
-                                <select name="gender" class="w3-select" id="">
-                                    <option value="مرد">مرد</option>
+                                <select  name="gender" class="w3-select" id="">
+                                    <option class="w3-text-white" value="مرد">مرد</option>
                                     <option selected value="زن">زن</option>
                                 </select>
 
@@ -91,30 +91,30 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-right'>هزینه: </span>
                             <input name="regCost" type="text" value="{{ $match->registrationCost}}"  class="my-input w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-btn-block w3-btn j-refree-select-btn w3-round-medium amethyst'>داور</span>
                     <br>
                     <br>
                     <p class="j-refree-select">
 
-                            <select multiple class="w3-select" name="refrees" id="">
-                                @if(count($refrees)==0)
-                                <option value="">داوری در سامانه وجود ندارد</option>
-                                 @else
-                                   @foreach($refrees->all() as $refree)
-                                        @if(in_array($refree, $match->$refrees))
-                                        <option selected value="{{$refree->id}}"></option>
-                                            @else
-                                            <option value="{{$refree->id}}"></option>
-                                        @endif
+                    <select multiple class="w3-select" name="refrees" id="">
+                @if(count($refrees)==0)
+                    <option dir="rtl" value="">داوری در سامانه وجود ندارد</option>
+                @else
+                @foreach($refrees->all() as $refree)
+                @if(in_array($refree, $match->$refrees))
+                    <option selected value="{{$refree->id}}"></option>
+                @else
+                    <option value="{{$refree->id}}"></option>
+                    @endif
 
-                                    @endforeach
-                                @endif
-                            </select>
-                        </p>
+                    @endforeach
+                    @endif
+                    </select>
+                    </p>
                         </p>
                     </div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
                     <div class="w3-col l12 m12 w3-container w3-right w3-margin-bottom"><p><button type="submit" class="w3-btn w3-blue w3-round-medium w3-btn-block">ویرایش و ثبت تغییرات</button></p></div>
                 </li>
                 </form>
