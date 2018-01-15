@@ -74,13 +74,13 @@
                     <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
                             @if($match->gender=='مرد')
                             <span  class='w3-right '>جنسیت: </span>
-                            <select name="gender" class="w3-select my-input " id="">
+                            <select name="gender" class="w3-select my-input w3-text-white" id="">
                                 <option class="w3-text-white"  selected value="مرد">مرد</option>
                                 <option value="زن">زن</option>
                             </select>
                              @else
                                 <span  class='w3-right my-input '>جنسیت: </span>
-                                <select  name="gender" class="w3-select" id="">
+                                <select  name="gender" class="w3-select w3-text-white" id="">
                                     <option class="w3-text-white" value="مرد">مرد</option>
                                     <option selected value="زن">زن</option>
                                 </select>
