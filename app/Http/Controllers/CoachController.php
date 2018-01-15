@@ -68,7 +68,7 @@ class CoachController extends Controller
   $user->address = $request->input('address');
   $user->fatherName = $request->input('fatherName');
   $user->save();
-  return redirect()->intended('coach/dashboard')->with('status', 'با موفقیت به روز شد');;
+  return redirect()->intended('coach/dashboard')->with('status', 'با موفقیت به روز شد');
     }
 
   }
@@ -83,6 +83,21 @@ class CoachController extends Controller
   }
   public function createTeam(Request $request){
 
-   return ['hey'=>'joe'];
+      $_user =  auth()->guard('web')->user();
+      $role = $_user->app_role->name;
+      if($role=='coach'){
+
+          $this->validate($request,[
+
+              'name' => 'required'
+          ]);
+          $user = User::getUser($_user);
+          $team = new Team();
+          $team->name = $request->name;
+          $team->coach_id =$user->id ;
+          $team->save();
+          return redirect()->intended('coach/dashboard')->with('status', 'تیم با موفقیت اضافه شد');
+      }
+
   }
 }

@@ -187,9 +187,10 @@
                              <div class="w3-col l4 m3 s1 w3-right">&nbsp;</div>
                              <div class="w3-col l4 m6 s10 w3-right w3-sand w3-card-16 w3-container w3-padding-24">
                                  <form action="/coach/createteam" method="post">
+                                     {{ csrf_field() }}
                                      <p>
                                          <label for="teamname">نام تیم</label>
-                                         <input id="teamname" name="name" dir="rtl" type="text" class=" w3-transparent w3-input border-bottom" >
+                                         <input id="teamname" name = "name" dir="rtl" type="text" class=" w3-transparent w3-input border-bottom" >
                                      </p>
                                      <p>
                                          <input class="w3-btn peter-river w3-btn-block w3-round-medium w3-margin-top" type="submit" value="ثبت تیم">
