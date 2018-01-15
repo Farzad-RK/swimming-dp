@@ -89,4 +89,18 @@ class SwimmerController extends Controller
 
    }
 
+   public function getSwimmer(Request $request){
+        //national number
+        $nn = $request->intput('nn');
+        $swimmer = Swimmer::where('nationalNumber',$nn)->first();
+        if($swimmer!=null){
+
+            return $swimmer;
+        }else{
+
+            return "یافت نشد";
+        }
+
+   }
+
 }

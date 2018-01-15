@@ -32,6 +32,7 @@ Route::post('/login/register','UserController@create');
 
 
 //swimmer routes
+Route::middleware('auth')->get('/swimmer/get','SwimmerController@getSwimmer');
 Route::middleware('auth')->get('/swimmer/dashboard','SwimmerController@dashboard');
 Route::middleware('auth')->get('/swimmer/logout','SwimmerController@logout');
 Route::middleware('auth')->post('/swimmer/update','SwimmerController@update');
