@@ -39,20 +39,17 @@ class SwimmerController extends Controller
        $all_courses = Course::all()->load('teacher');
        if($swimmer->team!=null){
          $team = $swimmer->team;
-         $my_matches=$team->matches->load('type');;
-         $coach = $team->coach;
+         $my_matches=$team->matches->load('type');
          $team_members= Swimmer::where('team_id',$team->id)->get;
-         $team = ['name'=>$team->name,
-                  'coach_name'=>$coach,
-                  'members'=>$team_members
-         ];
+         $team_name =$team->name;
+         $coach_name =$team->coach->firstName." ".$team->coach->firstName;
        } else {
          $team = [];
          $my_matches =[];
        }
        $all_matches = Match::all()->load('type');
        $selected = 'selected';
-       return view('swimmer.dashboard',compact('my_courses','all_courses','team','swimmer','email','my_matches'));
+       return view('swimmer.dashboard',compact('my_courses','all_courses','team_members','coach_name','team_name','swimmer','email','my_matches'));
      }
    }
 

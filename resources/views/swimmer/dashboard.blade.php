@@ -198,21 +198,21 @@
 
                     </div>
                     <div id="mainItem1-my-team" style="display: none;">
-                      @if(count($team)>0)
+                      @if($team_name!=null)
                         <div id="my-team-table">
                             <table class="w3-table" style="width: 90% ; margin: auto;">
                                 <tr style="border: 1px solid white;">
-                                    <td width="70%" class="peter-river w3-right-align w3-cen">{{$team->name}}</td>
+                                    <td width="70%" class="peter-river w3-right-align w3-cen">{{$team_name}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام تیم</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
-                                    <td width="70%" class="peter-river w3-right-align">{{$team->coach_name}}</td>
+                                    <td width="70%" class="peter-river w3-right-align">{{$coach_name}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام سرمربی</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
                                         <ul class="w3-ul">
-                                          @foreach($team->members->all() as $member)
+                                          @foreach($team_members->all() as $member)
                                           <li>{{$member->firstName}}&nbsp;{{$member->lastName}}</li>
                                         </ul>
                                           @endforeach
