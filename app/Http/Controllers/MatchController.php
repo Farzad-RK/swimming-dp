@@ -69,8 +69,16 @@ class MatchController extends Controller
        $match = $match->load(['type','refrees']);
        $refrees = Refree::all();
        $types = MatchType::all();
+       if(count($match->refrees())>0){
 
-       return view('admin.editmatch', compact('match','refrees','types'));
+           $match_refrees =$match->refrees();
+
+       } else{
+
+           $match_refrees =[];
+       }
+
+       return view('admin.editmatch', compact('match','refrees','types','match_refrees'));
        }else {
 
 
