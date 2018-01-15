@@ -72,11 +72,9 @@ class MatchController extends Controller
        if($match->refrees !=null){
 
            $match_refrees =$match->refrees()->get();
-           return $match_refrees;
        } else{
 
-           $match_refrees =['none'];
-           return $match_refrees;
+           $match_refrees =[];
        }
 
        return view('admin.editmatch', compact('match','refrees','types','match_refrees'));
