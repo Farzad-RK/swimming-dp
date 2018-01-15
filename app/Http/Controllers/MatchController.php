@@ -102,7 +102,7 @@ class MatchController extends Controller
            $match_refrees =MatchRefree::all();
 
            foreach ($match_refrees->all() as $mf){
-               $mf->delete();
+               $mf->forceDelete();
            }
 
            if($selected_refrees==0){
