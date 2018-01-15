@@ -86,7 +86,7 @@
                             @endif
                         </p>
                     </div>
-                    <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl">
                             <span  class='w3-right'>ماده: </span>
                             <select class="w3-select w3-text-white my-input" required name="type"  style="width: 100%;">
                                 @foreach ($types->all() as $type)
@@ -125,7 +125,7 @@
                     </p>
                         </p>
                     </div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
+                    <div class="w3-col l12 m12 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
                     <div class="w3-col l12 m12 w3-container w3-right w3-margin-bottom"><p><button type="submit" class="w3-btn w3-blue w3-round-medium w3-btn-block">ویرایش و ثبت تغییرات</button></p></div>
                 </li>
                 </form>
