@@ -31,12 +31,12 @@
             $(".j-loading-icon").show();
             $(".j-loading-icon").addClass("fa-spinner");
             $(".j-loading-icon").addClass("fa-spin");
-            var gender = $(this).val();
-            $.get("https://uinames.com/api/?gender=" + gender, function (data) {
+            var nn = $(this).val();
+            $.get("https://swimming-dp.herokuapp.com/swimmer/get?nn=" + nn, function (data) {
 //                    alert(data.name);
 //                    console.log(data.name);
 
-                $(".j-response-name").html(data.name);
+                $(".j-response-name").html(data.firstName + " " + data.lastName);
                 $(".j-response-name").show();
                 $(".j-loading-icon").removeClass("fa-spin");
                 $(".j-loading-icon").removeClass("fa-spinner");
@@ -198,8 +198,8 @@
                     </div>
                     <div id="mainItem1-my-team" style="display: none;">
                       @if($team_name!=null)
-                        <div id="my-team-table">
-                            <table class="w3-table" style="position:relative;width: 90% ; margin: auto;">
+                        <div id="my-team-table" style="position:relative; min-height: 400px;">
+                            <table class="w3-table" style="width: 90% ; margin: auto;">
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align w3-cen">{{$team_name}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام تیم</td>
