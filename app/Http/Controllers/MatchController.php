@@ -105,7 +105,7 @@ class MatchController extends Controller
                $mf->delete();
            }
 
-           if($selected_refrees!=0){
+           if($selected_refrees==0){
 
 
            }else {
