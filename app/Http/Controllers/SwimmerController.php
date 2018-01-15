@@ -44,7 +44,9 @@ class SwimmerController extends Controller
          $team_name =$team->name;
          $coach_name =$team->coach->firstName." ".$team->coach->firstName;
        } else {
-         $team = [];
+         $team_name = null;
+         $coach_name = null;
+         $team_members = null;
          $my_matches =[];
        }
        $all_matches = Match::all()->load('type');
