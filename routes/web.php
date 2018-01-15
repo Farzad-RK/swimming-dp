@@ -35,7 +35,9 @@ Route::post('/login/register','UserController@create');
 Route::middleware('auth')->get('/swimmer/dashboard','SwimmerController@dashboard');
 Route::middleware('auth')->get('/swimmer/logout','SwimmerController@logout');
 Route::middleware('auth')->post('/swimmer/update','SwimmerController@update');
-//coach routesd
+
+//coach routes
+
 Route::middleware('auth')->get('/coach/dashboard','CoachController@dashboard');
 Route::middleware('auth')->get('/coach/logout','CoachController@logout');
 Route::middleware('auth')->post('/coach/update','CoachController@update');
