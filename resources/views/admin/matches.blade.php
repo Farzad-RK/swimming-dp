@@ -157,7 +157,7 @@
              </p>
 
              <p>
-                 <label>نام مسابقه محل برگزاری مسابقه</label>
+                 <label> محل برگزاری مسابقه</label>
                  <br>
                  <input dir="place" class="w3-input w3-animate-input w3-right" name="place" type="text" style="width:50%">
                  <br>
@@ -205,7 +205,7 @@
                 <p>
                     <label>ظرفیت</label>
                     <br>
-                    <input name="regCost" dir="rtl" class="w3-input w3-animate-input w3-right" name="capacity" type="text" style="width:50%">
+                    <input name="capacity" dir="rtl" class="w3-input w3-animate-input w3-right" name="capacity" type="text" style="width:50%">
                     <br>
                     <br>
                     <br>
