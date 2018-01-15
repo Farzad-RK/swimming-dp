@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Match;
 use App\MatchType;
 use App\Refree;
-
+use App\MatchRefree;
 class MatchController extends Controller
 {
     public function index(Request $request){
@@ -96,7 +96,28 @@ class MatchController extends Controller
                'capacity'=>'required',
                'place'=>'required'
            ]);
-           return $request->input('refrees');
+            //setting the refrees
+
+           $selected_refrees =$request->input('refreees');
+           $match_refrees =MatchRefree::all();
+           foreach ($match_refrees->all() as $mf){
+               $mf->delete();
+           }
+
+           if(count($selected_refrees)==0){
+
+
+           }else {
+               foreach ($match_refrees as $selected){
+                   $m = new MatchRefree();
+                   $m->lineNumber = str(mt_rand(1,8));
+                   $m->refree_id =$selected;
+                   $m->match_id =$request->input('id');
+                   $m->save();
+               }
+           }
+
+
            $id = $request->input('id');
            $match = Match::find($id);
            $match->name = $request->input('name');
