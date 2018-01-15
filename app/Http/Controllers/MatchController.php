@@ -98,7 +98,7 @@ class MatchController extends Controller
            ]);
             //setting the refrees
 
-           $selected_refrees =$request->input('refreees');
+           $selected_refrees =$request->input('refrees');
            $match_refrees =MatchRefree::all();
            foreach ($match_refrees->all() as $mf){
                $mf->delete();
@@ -108,7 +108,8 @@ class MatchController extends Controller
 
 
            }else {
-               foreach ($match_refrees as $selected){
+               foreach ($selected_refrees as $selected){
+
                    $m = new MatchRefree();
                    $m->lineNumber = str(mt_rand(1,8));
                    $m->refree_id =$selected;
