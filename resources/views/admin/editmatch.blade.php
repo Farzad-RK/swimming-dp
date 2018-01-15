@@ -21,6 +21,12 @@
             $("#close-remove-modal").click(function () {
                 $("#remove-modal").fadeOut();
             });
+
+            $(".close-modal").click(function () {
+                $("#message-modal").hide();
+            });
+
+            $("#message-modal").show();
         });
     </script>
 </head>
@@ -185,7 +191,41 @@
 </div>
 
 <!--end modaaaalllllllssssss-->
+@if (session('status'))
+    <div id="message-modal" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4"  style="width: 500px;">
+            <header class="w3-container midnight-blue w3-center">
+                <h3>پیام</h3>
+            </header>
+            <div class="w3-container w3-center w3-padding-hor-16">
+                <p>{{ session('status') }}</p>
+                <p>
+                    <span class="w3-btn w3-green w3-margin w3-round close-modal" >باشه</span>
+                </p>
+            </div>
+        </div>
+    </div>
+@endif
 
+@if(count($errors))
+    <div id="message-modal" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4"  style="width: 500px;">
+            <header class="w3-container midnight-blue w3-center">
+                <h3>پیام</h3>
+            </header>
+            <div class="w3-container w3-center w3-padding-hor-16">
+                @foreach($errors->all() as $error)
+
+                    <p>{{$error}}</p>
+
+                @endforeach
+                <p>
+                    <span class="w3-btn w3-green w3-margin w3-round close-modal" >باشه</span>
+                </p>
+            </div>
+        </div>
+    </div>
+@endif
 <script>
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";

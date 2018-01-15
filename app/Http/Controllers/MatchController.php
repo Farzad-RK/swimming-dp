@@ -78,7 +78,6 @@ class MatchController extends Controller
    }
 
    public function update(Request $request){
-       return $request->input();
        $_user =  auth()->guard('web')->user();
        $role = $_user->app_role->name;
        if($role=='admin'){
@@ -108,7 +107,7 @@ class MatchController extends Controller
            $match->gender= $request->input('gender');
            $match->type_id =$request->input('type');
            $match->save();
-          // return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
+           return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
        }
    }
 }
