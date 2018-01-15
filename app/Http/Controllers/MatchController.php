@@ -105,7 +105,7 @@ class MatchController extends Controller
            $match->place = $request->input('place');
            $match->capacity= $request->input('capacity');
            $match->gender= $request->input('gender');
-           $match->type_id =$request->input('type');
+           $match->match_type_id =$request->input('type');
            $match->save();
            return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
        }
