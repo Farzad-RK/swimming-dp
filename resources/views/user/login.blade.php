@@ -7,7 +7,7 @@
     <script src=" {{asset('js/jquery.min.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('/awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link rel="stylesheet" href="{{ sasset('/css/w3.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/w3.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/kamadatepicker.css') }}">
     <script>
         $(document).ready(function () {
