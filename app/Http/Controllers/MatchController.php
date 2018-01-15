@@ -69,9 +69,9 @@ class MatchController extends Controller
        $match = $match->load(['type','refrees']);
        $refrees = Refree::all();
        $types = MatchType::all();
-       if(count($match->refrees()->get)>0){
+       if(count($match->refree)>0){
 
-           $match_refrees =$match->refrees()->get();
+           $match_refrees =$match->refrees;
        } else{
 
            $match_refrees =['none'=>'none'];
