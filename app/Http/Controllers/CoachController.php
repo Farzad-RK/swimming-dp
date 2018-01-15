@@ -31,6 +31,9 @@ class CoachController extends Controller
       } else {
         $team = [];
         $my_matches=[];
+        $team_name=null;
+        $coach_name =null;
+        $team_members=null;
       }
       $all_matches = Match::all()->load('type');
       $selected = 'selected';
