@@ -98,7 +98,7 @@ class MatchController extends Controller
            ]);
             //setting the refrees
 
-           $selected_refrees =$request->input('refrees');
+           $selected_refrees[] =$request->input('refrees');
            $match_refrees =MatchRefree::all();
            foreach ($match_refrees->all() as $mf){
                $mf->delete();
