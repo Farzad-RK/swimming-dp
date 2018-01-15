@@ -71,7 +71,7 @@ class MatchController extends Controller
        $types = MatchType::all();
        if($match->refrees !=null){
 
-           $match_refrees =$match->refrees();
+           $match_refrees =$match->refrees()->get();
            return $match_refrees;
        } else{
 
