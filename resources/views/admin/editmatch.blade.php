@@ -109,6 +109,11 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-right'>هزینه: </span>
                             <input name="regCost" type="text" value="{{ $match->registrationCost}}"  class="my-input w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
+
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
+                        <p dir="rtl"><span  class='w3-right'>ظرفیت: </span>
+                            <input name="capacity" type="text" value="{{ $match->capacity}}"  class="my-input w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
+
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-btn-block w3-btn j-refree-select-btn w3-round-medium amethyst'>داور</span>
                     <br>
