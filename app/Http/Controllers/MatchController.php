@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Match;
 use App\MatchType;
+use App\Refree;
+
 class MatchController extends Controller
 {
     public function index(Request $request){
@@ -56,6 +58,21 @@ class MatchController extends Controller
        $match->gender= $request->input('gender');
        $match->save();
        return redirect('/admin/matches')->with('status', 'با موفقیت اضافه شد');
+       }
+   }
+
+   public function edit(Match $match){
+
+       $_user =  auth()->guard('web')->user();
+       $role = $_user->app_role->name;
+       if($role=='admin'){
+       $match = $match->load(['type','refrees']);
+       $refrees = Refree::all();
+
+       return view('admin.editmatch', compact('match','refrees'));
+       }else {
+
+
        }
    }
 }

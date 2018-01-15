@@ -19,7 +19,8 @@ Route::middleware('auth')->get('/admin/dashboard','AdminController@dashboard');
 //admin match routes
 Route::middleware('auth')->get('/admin/matches','MatchController@index');
 Route::middleware('auth')->post('/admin/matches/create','MatchController@create');
-
+Route::middleware('auth')->get('/admin/matches/{match}','MatchController@edit');
+Route::middleware('auth')->post('/admin/matches/update','MatchController@update');
 //admin matchType routes
 Route::middleware('auth')->get('/admin/matchtype','MatchTypeController@index');
 Route::middleware('auth')->post('/admin/matchtype/create','MatchTypeController@create');
