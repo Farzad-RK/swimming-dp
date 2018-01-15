@@ -120,7 +120,7 @@
                     <br>
                     <p class="j-refree-select">
 
-                    <select multiple class="w3-select" name="refrees" id="">
+                    <select multiple class="w3-select" name="refrees[]" id="">
                 @if(count($refrees)==0)
                     <option dir="rtl" value="">داوری در سامانه وجود ندارد</option>
                 @else
