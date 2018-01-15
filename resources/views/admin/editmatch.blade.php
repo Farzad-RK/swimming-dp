@@ -124,19 +124,8 @@
                 @if(count($refrees)==0)
                     <option dir="rtl" value="">داوری در سامانه وجود ندارد</option>
                 @else
-                @foreach($refrees->all() as $refree)
-                  @if($match_refrees->count()>0)
-                              @foreach($match_refrees->all() as $match_refree)
-                                 @if($refree->id == $match_refree->id)
-                                        <option selected value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
-                                          @else
-                                          <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
-                                   @endif
-                           @endforeach
-                      @else
-                       <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
-                      @endif
-
+                    @foreach($refrees->all() as $refree)
+                                <option  @foreach($match_refrees->all() as $match_refree)  @if($refree->id == $match_refree->id) selected @endif  @endforeach value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
                      @endforeach
                     @endif
                     </select>
