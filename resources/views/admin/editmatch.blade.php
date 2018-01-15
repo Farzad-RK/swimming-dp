@@ -125,7 +125,7 @@
                     <option dir="rtl" value="">داوری در سامانه وجود ندارد</option>
                 @else
                 @foreach($refrees->all() as $refree)
-                @if(in_array($refree, $match_refrees))
+                @if(in_array($refree, $match_refrees->all()))
                     <option selected value="{{$refree->id}}"></option>
                 @else
                     <option value="{{$refree->id}}"></option>
