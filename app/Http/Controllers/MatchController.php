@@ -79,8 +79,11 @@ class MatchController extends Controller
    }
 
    public function update(Request $request){
+
        $selected_refrees[] =$request->input('refrees');
-        return $selected_refrees;
+
+       return $selected_refrees;
+
        $_user =  auth()->guard('web')->user();
        $role = $_user->app_role->name;
        if($role=='admin'){
@@ -100,25 +103,25 @@ class MatchController extends Controller
            ]);
             //setting the refrees
 
-           $selected_refrees[] =$request->input('refrees');
-           $match_refrees =MatchRefree::all();
-           foreach ($match_refrees->all() as $mf){
-               $mf->delete();
-           }
-
-           if(count($selected_refrees)==0){
-
-               return ['not'=>'found'];
-
-           }else {
-               for($i=0;count($selected_refrees)>$i;$i++ ){
-                   $m = new MatchRefree();
-                   $m->lineNumber = (string) mt_rand(1,8));
-                   $m->refree_id = $selected_refrees[$i];
-                   $m->match_id = $request->input('id');
-                   $m->save();
-               }
-           }
+//           $selected_refrees[] =$request->input('refrees');
+//           $match_refrees =MatchRefree::all();
+//           foreach ($match_refrees->all() as $mf){
+//               $mf->delete();
+//           }
+//
+//           if(count($selected_refrees)==0){
+//
+//               return ['not'=>'found'];
+//
+//           }else {
+//               for($i=0;count($selected_refrees)>$i;$i++ ){
+//                   $m = new MatchRefree();
+//                   $m->lineNumber = (string) mt_rand(1,8));
+//                   $m->refree_id = $selected_refrees[$i];
+//                   $m->match_id = $request->input('id');
+//                   $m->save();
+//               }
+//           }
 
 
            $id = $request->input('id');
