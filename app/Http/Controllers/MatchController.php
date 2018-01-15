@@ -98,7 +98,6 @@ class MatchController extends Controller
            ]);
 
            $selected_refrees =$request->input('refrees');
-           return gettype($selected_refrees);
             //setting the refrees
            $match_refrees =MatchRefree::all();
 
@@ -106,8 +105,7 @@ class MatchController extends Controller
                $mf->delete();
            }
 
-           if(sizeof($selected_refrees)==0){
-
+           if($selected_refrees!=0){
 
 
            }else {
