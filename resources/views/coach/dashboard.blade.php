@@ -21,6 +21,47 @@
               });
 
     $("#message-modal").show();
+
+
+        /**
+         *
+         * add team members
+         */
+        $(".j-swimmer-national-code-input").keyup(function () {
+            $(".j-loading-icon").show();
+            $(".j-loading-icon").addClass("fa-spinner");
+            $(".j-loading-icon").addClass("fa-spin");
+            var gender = $(this).val();
+            $.get("https://uinames.com/api/?gender=" + gender, function (data) {
+//                    alert(data.name);
+//                    console.log(data.name);
+
+                $(".j-response-name").html(data.name);
+                $(".j-response-name").show();
+                $(".j-loading-icon").removeClass("fa-spin");
+                $(".j-loading-icon").removeClass("fa-spinner");
+                $(".j-loading-icon").addClass("fa-check");
+
+
+            });
+
+        });
+        $(".j-close-add-swimmer-modal").click(function () {
+            $(".j-loading-icon").removeClass("fa-spin");
+            $(".j-loading-icon").hide();
+            $(".j-swimmer-national-code-input").val("");
+            $(".j-response-name").html("");
+            $(".j-loading-icon").removeClass("fa-check");
+        });
+
+        $(".j-remove-swimmer-from-team").click(function () {
+            $("#remove-modal").fadeIn();
+        });
+
+        $("#close-remove-modal").click(function () {
+            $("#remove-modal").fadeOut();
+        });
+
     });
     </script>
 
@@ -158,7 +199,7 @@
                     <div id="mainItem1-my-team" style="display: none;">
                       @if($team_name!=null)
                         <div id="my-team-table">
-                            <table class="w3-table" style="width: 90% ; margin: auto;">
+                            <table class="w3-table" style="position:relative;width: 90% ; margin: auto;">
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align w3-cen">{{$team_name}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام تیم</td>
@@ -167,17 +208,22 @@
                                     <td width="70%" class="peter-river w3-right-align">{{$coach_name}}</td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام سرمربی</td>
                                 </tr>
+
                                 <tr style="border: 1px solid white;">
-                                    <td width="70%" class="peter-river w3-right-align">
+                                    <td width="60%" class="peter-river w3-right-align">
                                         <ul class="w3-ul">
-                                          @foreach($team_members->all() as $member)
-                                          <li>{{$member->firstName}}&nbsp;{{$member->lastName}}</li>
+                                            @foreach($team_members->all() as $member)
+                                            <li class="w3-padding-hor-16">
+                                                <span>{{$member->firstName}}&nbsp;{{$member->lastName}}</span>
+                                                <span  class="j-remove-swimmer-from-team w3-btn w3-left w3-round-medium midnight-blue w3-large w3-padding" style="margin-top: -10px;">×</span>
+                                            </li>
+                                            @endforeach
                                         </ul>
-                                          @endforeach
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام اعضای تیم</td>
                                 </tr>
                             </table>
+                            <button onclick="document.getElementById('addSwimmer').style.display='block'" class="w3-btn w3-circle w3-xlarge peter-river" style="position:absolute; right: 0; bottom: 0;">+</button>
                         </div>
                        @else
 
@@ -417,6 +463,41 @@
     </div>
 </div>
 @endif
+
+<div id="addSwimmer" class=" w3-animate-opacity w3-modal"> <!--behesh w3-modal midam-->
+    <div class="w3-modal-content w3-card-4 w3-right-align" style="width: 50%;">
+        <header class="w3-container midnight-blue w3-padding-hor-24">
+        <span onclick="document.getElementById('addSwimmer').style.display='none'"
+              class="w3-btn w3-large w3-display-topleft w3-transparent w3-xxlarge j-close-add-swimmer-modal">&times;</span>
+            <p class="w3-xlarge">افزودن شناگر به تیم</p>
+        </header>
+        <div class="w3-container w3-padding-hor-8 ">
+            <form id="addMatchType"  class="w3-container">
+
+                <label>شماره ملی شناگر</label>
+                <br>
+                <input  dir="rtl" name="type_name" class="w3-input  w3-right j-swimmer-national-code-input" type="text" style="width:50%; border-bottom: 2px solid #9b59b6!important;">
+                <span class="w3-right " style="width: 40px;">&nbsp;<i class="fa fa-spinner fa-2x j-loading-icon "  style="margin-top: 5px; display: none;" aria-hidden="true"></i></span>
+                <br>
+                <br>
+                <p class=" w3-margin-right j-response-name" style="padding:  20px 0 20px 0; display: none;"></p>
+                <br>
+
+
+
+
+                <P>
+                    <input class="w3-btn peter-river w3-round-medium w3-btn-block" type="submit" value="افزودن شناگر">
+                </P>
+
+
+            </form>
+        </div>
+        <footer class="w3-container midnight-blue w3-padding-hor-8">
+            <p>افزودن شناگر</p>
+        </footer>
+    </div>
+</div>
 <script>
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
