@@ -68,11 +68,42 @@ class MatchController extends Controller
        if($role=='admin'){
        $match = $match->load(['type','refrees']);
        $refrees = Refree::all();
+       $types = MatchType::all();
 
-       return view('admin.editmatch', compact('match','refrees'));
+       return view('admin.editmatch', compact('match','refrees','types'));
        }else {
 
 
+       }
+   }
+
+   public function update(Request $request){
+
+       $_user =  auth()->guard('web')->user();
+       $role = $_user->app_role->name;
+       if($role=='admin'){
+
+           $this->validate($request,[
+               'name'=>'required',
+               'startDate'=> 'required',
+               'endDate' => 'required',
+               'regStartDate'=>'required',
+               'regEndDate'=>'required',
+               'regCost'=>'required',
+               'type'=>'required',
+           ]);
+           $id = $request->input('id');
+           $match = Match::find($id);
+           $match->name = $request->input('name');
+           $match->startDate = $request->input('startDate');
+           $match->endDate = $request->input('endDate');
+           $match->regStartDate = $request->input('regStartDate');
+           $match->regEndDate = $request->input('regEndDate');
+           $match->place = $request->input('place');
+           $match->capacity= $request->input('capacity');
+           $match->gender= $request->input('gender');
+           $match->save();
+           return redirect('/admin/matches')->with('status', 'با موفقیت به روز شد.');
        }
    }
 }

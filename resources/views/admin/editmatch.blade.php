@@ -68,24 +68,34 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان: </span><input name="endDate" value="{{$match->endDate}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ شروع ثبت نام: </span><input name="regStartDate" value="{{$match->regStartDate}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان ثبت نام: </span><input name="regEndDate" value="{{$match->regEndDate}}"  type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام ماده: </span><input name="typeName" value="{{$match->type->name}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>رده سنی: </span><input name="typeAge" value="{{$match->type->age}}" type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>محل برگزاری: </span><input name="place" value="{{$match->place}}"  type="text" class="my-input w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
                             @if($match->gender=='مرد')
                             <span  class='w3-right '>جنسیت: </span>
-                            <select name="gender" class="w3-select my-input w3-text-white" id="">
+                            <select name="gender" class="w3-select my-input w3-text-white " id="">
                                 <option class="w3-text-white"  selected value="مرد">مرد</option>
                                 <option value="زن">زن</option>
                             </select>
                              @else
-                                <span  class='w3-right my-input '>جنسیت: </span>
+                                <span  class='w3-right my-input w3-text-white '>جنسیت: </span>
                                 <select  name="gender" class="w3-select w3-text-white" id="">
                                     <option class="w3-text-white" value="مرد">مرد</option>
                                     <option selected value="زن">زن</option>
                                 </select>
 
                             @endif
+                        </p>
+                    </div>
+                    <div class="w3-col l6 m6 w3-container w3-right"><p dir="rtl">
+                            <select class="w3-select" required name="type"  style="width: 50%;">
+                                @foreach ($types->all() as $type)
+                                    @if(in_array($type, $match->$type))
+                                    <option selected value={{$type->id}}>{{$type->age}}&nbsp;{{$type->name}}</option>
+                                    @else
+                                    <option value={{$type->id}}>{{$type->age}}&nbsp;{{$type->name}}</option>
+                                        @endif
+                                @endforeach
+                            </select>
                         </p>
                     </div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
