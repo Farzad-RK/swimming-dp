@@ -33,7 +33,7 @@
             $(".j-loading-icon").addClass("fa-spinner");
             $(".j-loading-icon").addClass("fa-spin");
             var nn = $(this).val();
-            $.get("https://swimming-dp.herokuapp.com/swimmer/get?nn=" + nn, function (data) {
+            $.get("http://swimming-dp.herokuapp.com/swimmer/get?nn=" + nn, function (data) {
 //                    alert(data.name);
                   console.log(data);
                 if (data == "یافت نشد"){
