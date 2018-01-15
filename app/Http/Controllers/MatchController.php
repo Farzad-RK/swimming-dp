@@ -75,7 +75,7 @@ class MatchController extends Controller
 
        } else{
 
-           $match_refrees =[];
+           $match_refrees =['none'];
        }
 
        return view('admin.editmatch', compact('match','refrees','types','match_refrees'));
