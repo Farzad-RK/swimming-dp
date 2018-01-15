@@ -118,7 +118,7 @@ class MatchController extends Controller
 //               }
 //           }
 
-           $selected_refrees[] =$request->input('refrees');
+           $selected_refrees =$request->input('refrees');
            return $selected_refrees;
 
            $id = $request->input('id');
