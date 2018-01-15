@@ -79,6 +79,8 @@ class MatchController extends Controller
    }
 
    public function update(Request $request){
+       $selected_refrees[] =$request->input('refrees');
+        return $selected_refrees;
        $_user =  auth()->guard('web')->user();
        $role = $_user->app_role->name;
        if($role=='admin'){
@@ -103,7 +105,6 @@ class MatchController extends Controller
            foreach ($match_refrees->all() as $mf){
                $mf->delete();
            }
-           return $selected_refrees[0];
 
            if(count($selected_refrees)==0){
 
