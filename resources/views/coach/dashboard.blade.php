@@ -36,24 +36,30 @@
             $.get("https://swimming-dp.herokuapp.com/swimmer/get?nn=" + nn, function (data) {
 //                    alert(data.name);
                   console.log(data);
-
-                $(".j-response-name").html(data.firstName + " " + data.lastName);
-                $(".j-response-name").show();
-                $(".j-loading-icon").removeClass("fa-spin");
-                $(".j-loading-icon").removeClass("fa-spinner");
-                $(".j-loading-icon").addClass("fa-check");
+                if (data == "یافت نشد"){
+                    $(".j-loading-icon").removeClass("fa-spin");
+                    $(".j-loading-icon").removeClass("fa-spinner");
+                    $(".j-loading-icon").addClass("fa-times");
+                } else {
+                    $(".j-response-name").html(data.firstName + " " + data.lastName);
+                    $(".j-response-name").show();
+                    $(".j-loading-icon").removeClass("fa-spin");
+                    $(".j-loading-icon").removeClass("fa-spinner");
+                    $(".j-loading-icon").addClass("fa-check");
+                }
 
 
             });
 
-        });
-        $(".j-close-add-swimmer-modal").click(function () {
-            $(".j-loading-icon").removeClass("fa-spin");
-            $(".j-loading-icon").hide();
-            $(".j-swimmer-national-code-input").val("");
-            $(".j-response-name").html("");
-            $(".j-loading-icon").removeClass("fa-check");
-        });
+            });
+            $(".j-close-add-swimmer-modal").click(function () {
+                $(".j-loading-icon").removeClass("fa-spin");
+                $(".j-loading-icon").hide();
+                $(".j-swimmer-national-code-input").val("");
+                $(".j-response-name").html("");
+                $(".j-loading-icon").removeClass("fa-check");
+                $(".j-loading-icon").removeClass("fa-times");
+            });
 
         $(".j-remove-swimmer-from-team").click(function () {
             $("#remove-modal").fadeIn();
