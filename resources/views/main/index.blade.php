@@ -3,20 +3,20 @@
 <title>صفحه اصلی | هیئت شنای استان</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href= "{{secure_asset("/w3-v4/w3.css") }}">
+<link rel="stylesheet" href= "{{asset("/w3-v4/w3.css") }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="{{ secure_asset('/awesome/css/font-awesome.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('/css/style.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('/css/w3.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('/css/kamadatepicker.css') }}">
+<link rel="stylesheet" href="{{ asset('/awesome/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/w3.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/kamadatepicker.css') }}">
 <style>
-   {!!  !
+   {!!
 
      body {font-family: "yekan";}
      body h2, p{
          font-family: "yekan";
      }
-     .mySlides {display: none}
+     .mySlides {display: none;}
      @font-face{
          font-family: "yekan";
          src:url("fonts/yekan.eot");
@@ -28,7 +28,7 @@
      }
 
 
-     !}
+     !!}
 
 </style>
 <body>

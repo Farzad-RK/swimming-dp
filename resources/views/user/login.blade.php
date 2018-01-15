@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <script src=" {{secure_asset('js/jquery.min.js')}}"></script>
-    <link rel="stylesheet" href="{{ secure_asset('/awesome/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('/css/style.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('/css/w3.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('/css/kamadatepicker.css') }}">
+    <script src=" {{asset('js/jquery.min.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('/awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="stylesheet" href="{{ sasset('/css/w3.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/kamadatepicker.css') }}">
     <script>
         $(document).ready(function () {
             $("#login-btn").click(function () {
