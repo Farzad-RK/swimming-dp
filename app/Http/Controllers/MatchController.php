@@ -109,11 +109,11 @@ class MatchController extends Controller
                return ['not'=>'found'];
 
            }else {
-               foreach ($selected_refrees as $selected){
+               for($i=0;count($selected_refrees)>$i;$i++ ){
                    $m = new MatchRefree();
                    $m->lineNumber = (string) (mt_rand(1,8));
-                   $m->refree_id =$selected;
-                   $m->match_id =$request->input('id');
+                   $m->refree_id = $selected_refrees[$i];
+                   $m->match_id = $request->input('id');
                    $m->save();
                }
            }
