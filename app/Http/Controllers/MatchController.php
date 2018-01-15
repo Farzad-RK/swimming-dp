@@ -78,10 +78,11 @@ class MatchController extends Controller
    }
 
    public function update(Request $request){
-
+       return $request->input();
        $_user =  auth()->guard('web')->user();
        $role = $_user->app_role->name;
        if($role=='admin'){
+
 
            $this->validate($request,[
                'name'=>'required',
