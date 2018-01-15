@@ -96,30 +96,27 @@ class MatchController extends Controller
                'capacity'=>'required',
                'place'=>'required'
            ]);
-            //setting the refrees
-
-//           $selected_refrees[] =$request->input('refrees');
-//           $match_refrees =MatchRefree::all();
-//           foreach ($match_refrees->all() as $mf){
-//               $mf->delete();
-//           }
-//
-//           if(count($selected_refrees)==0){
-//
-//               return ['not'=>'found'];
-//
-//           }else {
-//               for($i=0;count($selected_refrees)>$i;$i++ ){
-//                   $m = new MatchRefree();
-//                   $m->lineNumber = (string) mt_rand(1,8));
-//                   $m->refree_id = $selected_refrees[$i];
-//                   $m->match_id = $request->input('id');
-//                   $m->save();
-//               }
-//           }
 
            $selected_refrees =$request->input('refrees');
-           return $selected_refrees;
+            //setting the refrees
+           $match_refrees =MatchRefree::all();
+           foreach ($match_refrees->all() as $mf){
+               $mf->delete();
+           }
+
+           if(count($selected_refrees)==0){
+
+               return ['not'=>'found'];
+
+           }else {
+               for($i=0;count($selected_refrees)>$i;$i++ ){
+                   $m = new MatchRefree();
+                   $m->lineNumber = (string) mt_rand(1,8));
+                   $m->refree_id = $selected_refrees[$i];
+                   $m->match_id = $request->input('id');
+                   $m->save();
+               }
+           }
 
            $id = $request->input('id');
            $match = Match::find($id);
