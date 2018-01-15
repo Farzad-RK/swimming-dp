@@ -73,14 +73,14 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>محل برگزاری: </span><input name="place" value="{{$match->place}}"  type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl">
                             @if($match->gender=='مرد')
-                            <span  class='w3-right w3-select'>جنسیت: </span>
-                            <select name="gender" id="">
+                            <span  class='w3-right '>جنسیت: </span>
+                            <select name="gender" class="w3-select" id="">
                                 <option  selected value="مرد">مرد</option>
                                 <option value="زن">زن</option>
                             </select>
                              @else
-                                <span  class='w3-right w3-select'>جنسیت: </span>
-                                <select name="gender" id="">
+                                <span  class='w3-right '>جنسیت: </span>
+                                <select name="gender" class="w3-select" id="">
                                     <option value="مرد">مرد</option>
                                     <option selected value="زن">زن</option>
                                 </select>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-right'>هزینه: </span>
-                            <input type="text" value="{{ $match->price }}"  class="w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
+                            <input name="regCost" type="text" value="{{ $match->registrationCost}}"  class="w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-btn-block w3-btn j-refree-select-btn w3-round-medium amethyst'>داور</span>
                             <br>
