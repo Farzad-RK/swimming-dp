@@ -96,6 +96,7 @@ class MatchController extends Controller
                'capacity'=>'required',
                'place'=>'required'
            ]);
+           return $request->input('refrees');
            $id = $request->input('id');
            $match = Match::find($id);
            $match->name = $request->input('name');

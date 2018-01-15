@@ -126,15 +126,15 @@
                 @else
                 @foreach($refrees->all() as $refree)
                   @if($match_refrees->count()>0)
-                                    @foreach($match_refrees->all() as $match_refree)
-                                        @if($refree->id == $match_refree->id)
-                                            <option selected value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->name}}</option>
-                                        @else
-                                            <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->name}}</option>
-                                        @endif
-                                    @endforeach
+                              @foreach($match_refrees->all() as $match_refree)
+                                 @if($refree->id == $match_refree->id)
+                                        <option selected value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
+                                          @else
+                                          <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
+                                   @endif
+                           @endforeach
                       @else
-                       <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->name}}</option>
+                       <option value="{{$refree->id}}">{{$refree->lastName}}&nbsp;{{$refree->firstName}}</option>
                       @endif
 
                      @endforeach
