@@ -83,6 +83,6 @@ class CoachController extends Controller
   }
   public function createTeam(Request $request){
 
-
+   return ['hey'=>'joe'];
   }
 }

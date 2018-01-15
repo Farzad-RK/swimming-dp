@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1665cf1-c925-4ff9-9adb-8a730d3968db" name="Default" comment="g">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CoachController.php" />
-    </list>
+    <list default="true" id="a1665cf1-c925-4ff9-9adb-8a730d3968db" name="Default" comment="g" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CoachController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -142,21 +140,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="378">
               <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/coach/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-3888">
-              <caret line="228" column="33" lean-forward="true" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
+              <caret line="228" column="33" lean-forward="false" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
               <folding>
                 <marker date="1516027818668" expanded="true" signature="222:254" ph="..." />
                 <marker date="1516027818668" expanded="true" signature="279:304" ph="..." />
@@ -363,7 +361,7 @@
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="74" />
     <option name="width" value="1850" />
     <option name="height" value="1084" />
@@ -503,15 +501,15 @@
       <option name="presentableId" value="Default" />
       <updated>1516016288372</updated>
       <workItem from="1516016290629" duration="746000" />
-      <workItem from="1516017848924" duration="30286000" />
+      <workItem from="1516017848924" duration="30449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31032000" />
+    <option name="totallyTimeSpent" value="31195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="0" width="1842" height="1080" extended-state="7" />
+    <frame x="74" y="0" width="1842" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18875279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -701,13 +699,13 @@
         <state relative-caret-position="686">
           <caret line="443" column="6" lean-forward="false" selection-start-line="443" selection-start-column="6" selection-end-line="443" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#5;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#0;n#tr#8;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#4;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#5;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#8;n#table#0;n#div#0;n#form#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <marker date="1516027818548" expanded="true" signature="222:254" ph="..." />
             <marker date="1516027818548" expanded="true" signature="279:304" ph="..." />
             <marker date="1516027818548" expanded="true" signature="338:363" ph="..." />
@@ -947,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -966,7 +956,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CoachController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <caret line="33" column="24" lean-forward="false" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -974,7 +964,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/coach/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3888">
-          <caret line="228" column="33" lean-forward="true" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
+          <caret line="228" column="33" lean-forward="false" selection-start-line="228" selection-start-column="33" selection-end-line="228" selection-end-column="33" />
           <folding>
             <marker date="1516027818668" expanded="true" signature="222:254" ph="..." />
             <marker date="1516027818668" expanded="true" signature="279:304" ph="..." />
@@ -1028,6 +1018,14 @@
             <marker date="1516027818668" expanded="true" signature="23520:23544" ph="..." />
             <marker date="1516027818668" expanded="true" signature="23564:23570" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
