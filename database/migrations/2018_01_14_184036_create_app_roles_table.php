@@ -11,17 +11,17 @@ class CreateAppRolesTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('app_roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->timestamps();
-        });
-        Schema::table('app_roles', function ($table) {
-            $table->softDeletes();
-        });
-    }
+     public function up()
+     {
+         Schema::create('app_roles', function (Blueprint $table) {
+             $table->increments('id');
+             $table->string('name');
+             $table->timestamps();
+         });
+         Schema::table('app_roles', function ($table) {
+             $table->softDeletes();
+         });
+     }
 
     /**
      * Reverse the migrations.

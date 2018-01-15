@@ -16,7 +16,7 @@ class MatchController extends Controller
       else {
 
         $_user =  auth()->guard('web')->user();
-        $role = $_user->role->name;
+        $role = $_user->app_role->name;
         if($role=='admin'){
           $matches = Match::orderBy('created_at','desc')->with('type')->paginate(10);
           $types = MatchType::all();
@@ -28,7 +28,7 @@ class MatchController extends Controller
    }
    public function create(Request $request){
      $_user =  auth()->guard('web')->user();
-     $role = $_user->role->name;
+     $role = $_user->app_role->name;
      if($role=='admin'){
        $this->validate($request,[
         'name'=>'required',

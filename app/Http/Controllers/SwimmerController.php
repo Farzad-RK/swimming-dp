@@ -31,7 +31,7 @@ class SwimmerController extends Controller
 
    public function dashboard(){
      $_user =  auth()->guard('web')->user();
-     $role = $_user->role->name;
+     $role = $_user->app_role->name;
      if($role=='swimmer'){
        $swimmer = User::getUser($_user);
        $email =$_user->email;
@@ -58,7 +58,7 @@ class SwimmerController extends Controller
 
    public function update(Request $request){
      $_user =  auth()->guard('web')->user();
-     $role = $_user->role->name;
+     $role = $_user->app_role->name;
      if($role=='swimmer'){
 
     $user = User::getUser($_user);

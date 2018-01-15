@@ -13,7 +13,7 @@ class RefreeController extends Controller
     public function currentMatches(Request $request){
 
     $_user =  auth()->guard('api')->user();
-    $role =$_user->role->name;
+    $role =$_user->app_role->name;
     if ($role =='refree'){
     $user = User::getUser($_user);
     $matches = $user->matches;
@@ -26,7 +26,7 @@ class RefreeController extends Controller
     public function prevMatches(Request $request){
 
     $_user =  auth()->guard('api')->user();
-    $role =$_user->role->name;
+    $role =$_user->app_role->name;
     if ($role =='refree'){
     $user = User::getUser($_user);
     $results = Result::where('refree_id',$user->id)->get();
@@ -46,7 +46,7 @@ class RefreeController extends Controller
     }
     public function checkSwimmer(Request $request){
       $_user =  auth()->guard('api')->user();
-      $role =$_user->role->name;
+      $role =$_user->app_role->name;
       if ($role =='refree'){
       $user = User::getUser($_user);
       $nationalNumber =$request->input('nationalNumber');
@@ -83,7 +83,7 @@ class RefreeController extends Controller
     public function setResult(Request $request){
 
       $_user =  auth()->guard('api')->user();
-      $role =$_user->role->name;
+      $role =$_user->app_role->name;
       if ($role =='refree'){
       $user = User::getUser($_user);
       $nationalNumber =$request->input('nationalNumber');

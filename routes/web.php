@@ -40,8 +40,13 @@ Route::middleware('auth')->get('/coach/logout','CoachController@logout');
 Route::middleware('auth')->post('/coach/update','CoachController@update');
 Route::middleware('auth')->post('/coach/createteam','CoachController@createTeam');
 
-//main route
+
 Route::get('/' , function(){
 
      return view('main.index');
+});
+
+
+Route::group(['prefix' => 'voyager'], function () {
+    Voyager::routes();
 });

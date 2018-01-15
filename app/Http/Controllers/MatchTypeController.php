@@ -9,7 +9,7 @@ class MatchTypeController extends Controller
   public function index(){
 
     $_user =  auth()->guard('web')->user();
-    $role = $_user->role->name;
+    $role = $_user->app_role->name;
     if($role=='admin'){
 
       $matchtypes = MatchType::orderBy('created_at','desc')->paginate(10);
@@ -20,7 +20,7 @@ class MatchTypeController extends Controller
 
   public function create(Request $request){
     $_user =  auth()->guard('web')->user();
-    $role = $_user->role->name;
+    $role = $_user->app_role->name;
     if($role=='admin'){
 
       $this->validate($request,[

@@ -48,7 +48,7 @@ class UserController extends Controller
     $user = User::where('email' ,$email)->get();
     if ($user->count()>0){
            $user = $user[0];
-           $role = $user->role;
+           $role = $user->app_role;
            if ($role->name =='swimmer'){
                if(Auth::attempt(['email' => $email, 'password' => $password])){
                return redirect()->intended('swimmer/dashboard');
@@ -84,12 +84,11 @@ class UserController extends Controller
        'fatherName' => 'required'
       ]);
     $password = $request->input('password');
-    $role = AppRole::where('name',$request->input('role'))->get();
-    $role = $role[0];
+    $role = AppRole::where('name',$request->input('role'))->first();
     $user = new User();
     $user->email = $request->input('email');
     $user->password = bcrypt($request->input('password'));
-    $user->role_id = $role->id;
+    $user->app_role_id = $role->id;
     $user->save();
     $user = User::where('email',$request->input('email'))->get();
     $user = $user[0];

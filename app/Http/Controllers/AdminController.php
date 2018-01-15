@@ -38,7 +38,7 @@ class AdminController extends Controller
           $user = User::where('email' ,$email)->get();
           if ($user->count()>0){
                $user = $user[0];
-               $role = $user->role;
+               $role = $user->app_role;
                if ($role->name =='admin'){
                if(Auth::attempt(['email' => $email, 'password' => $password])){
 
@@ -50,7 +50,7 @@ class AdminController extends Controller
 
    public function dashboard(){
      $_user =  auth()->guard('web')->user();
-     $role = $_user->role->name;
+     $role = $_user->app_role->name;
      if($role=='admin'){
        return view('admin.dashboard');
      }

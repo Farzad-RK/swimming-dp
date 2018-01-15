@@ -3,12 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class AppRole extends Model
 {
-  use SoftDeletes;
-  protected $dates = ['deleted_at'];
-  protected $table = 'app_roles';
+  public function users(){
 
+       return $this->hasMany('App\User','app_role_id');
+  }
 }

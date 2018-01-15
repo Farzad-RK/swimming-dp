@@ -25,7 +25,7 @@ class APILoginController extends Controller
     if ($user->count()>0){
          $user = $user[0];
          if(Hash::check($password ,$user->password)){
-           $role = $user->role ;
+           $role = $user->app_role ;
            if ($role->name =='refree'){
 
                $request->request->add([

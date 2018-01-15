@@ -7,20 +7,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+class User extends \TCG\Voyager\Models\User
 {
   use HasApiTokens, Notifiable;
   use SoftDeletes;
 
   protected $dates = ['deleted_at'];
-  protected $table = 'app_users';
-   public function role(){
+  protected $table = 'users';
 
-     return $this->belongsTo('App\AppRole','role_id');
+   public function app_role(){
+
+     return $this->belongsTo('App\AppRole','app_role_id');
    }
 
    public static function getUser(User $user ){
-   $role = $user->role->name;
+   $role = $user->app_role->name;
 
    if($role == 'refree'){
 
