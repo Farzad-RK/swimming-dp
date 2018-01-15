@@ -104,7 +104,7 @@ class MatchController extends Controller
                $mf->delete();
            }
 
-           if(count($selected_refrees)==0){
+           if(sizeof($selected_refrees)==0){
 
                return ['not'=>'found'];
 
