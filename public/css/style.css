@@ -225,7 +225,7 @@ a{
   background-attachment: fixed;;
 }
 .my-input{
-  border-bottom: 3px solid #9b59b6;
+  border-bottom: 3px solid #9b59b6!important;
   background: transparent;
 }
 

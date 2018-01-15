@@ -91,14 +91,15 @@
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-right'>هزینه: </span>
                             <input name="regCost" type="text" value="{{ $match->registrationCost}}"  class="my-input w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-btn-block w3-btn j-refree-select-btn w3-round-medium amethyst'>داور</span>
-                            <br>
-                            <br>
-                        <p class="j-refree-select">
+                    <br>
+                    <br>
+                    <p class="j-refree-select">
 
                             <select multiple class="w3-select" name="refrees" id="">
-                                @if(count($refrees)>0)
+                                @if(count($refrees)==0)
                                 <option value="">داوری در سامانه وجود ندارد</option>
                                  @else
                                    @foreach($refrees->all() as $refree)
@@ -115,7 +116,6 @@
                         </p>
                     </div>
                     <div class="w3-col l12 m12 w3-container w3-right w3-margin-bottom"><p><button type="submit" class="w3-btn w3-blue w3-round-medium w3-btn-block">ویرایش و ثبت تغییرات</button></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p> <button class="j-remove-btn w3-btn w3-red w3-round-medium w3-btn-block">حذف این مسابقه</button></p></div>
                 </li>
                 </form>
             </ul>
