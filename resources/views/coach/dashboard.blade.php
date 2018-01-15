@@ -267,37 +267,37 @@
                             <table class="w3-table" style="width: 90% ; margin: auto;">
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align w3-cen">
-                                        <input type="text" id="my-name" name="firstName" value={{$swimmer->firstName}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" id="my-name" name="firstName" value="{{$swimmer->firstName}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="lastName" value={{$swimmer->lastName}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="lastName" value="{{$swimmer->lastName}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام خانوادگی</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="fatherName" value={{$swimmer->fatherName}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="fatherName" value="{{$swimmer->fatherName}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">نام پدر</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="nationalNumber" value={{$swimmer->nationalNumber}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="nationalNumber" value="{{$swimmer->nationalNumber}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">کد ملی</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="mobileNumber" value={{$swimmer->mobileNumber}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="mobileNumber" value="{{$swimmer->mobileNumber}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">شماره موبایل</td>
                                 </tr>
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="phoneNumber" value={{$swimmer->phoneNumber}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="phoneNumber" value="{{$swimmer->phoneNumber}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%" class="midnight-blue w3-right-align">شماره تلفن ثابت</td>
                                 </tr>
@@ -329,7 +329,7 @@
 
                                 <tr style="border: 1px solid white;">
                                     <td width="70%" class="peter-river w3-right-align">
-                                        <input type="text" name="address" value={{$swimmer->address}} class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
+                                        <input type="text" name="address" value="{{$swimmer->address}}" class="w3-transparent" dir="rtl" style="border: 0; width: 100%;">
                                     </td>
                                     <td width="30%"  class="midnight-blue w3-right-align">آدرس منزل</td>
                                 </tr>

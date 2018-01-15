@@ -63,14 +63,14 @@
                 <form method="post" action="/admin/match/update">
                     <input hidden name="id" type="text" value={{$match->id}}>
                 <li class="w3-row  w3-center  " >
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام مسابقه: </span><input name="name" value={{$match->name}} autofocus type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ شروع: </span><input name="startDate" value={{$match->startDate}} type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان: </span><input name="endDate" value={{$match->endDate}} type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ شروع ثبت نام: </span><input name="regStartDate" value={{$match->regStartDate}} type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان ثبت نام: </span><input name="regEndDate" value={{$match->regEndDate}}  type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام ماده: </span><input name="typeName" value={{$match->type->name}} type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>رده سنی: </span><input name="typeAge" value={{$match->type->age}} type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
-                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>محل برگزاری: </span><input name="place" value={{$match->place}}  type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام مسابقه: </span><input name="name" value="{{$match->name}}" autofocus type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ شروع: </span><input name="startDate" value="{{$match->startDate}}" type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان: </span><input name="endDate" value="{{$match->endDate}}" type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ شروع ثبت نام: </span><input name="regStartDate" value="{{$match->regStartDate}}" type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>تاریخ پایان ثبت نام: </span><input name="regEndDate" value="{{$match->regEndDate}}"  type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>نام ماده: </span><input name="typeName" value="{{$match->type->name}}" type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>رده سنی: </span><input name="typeAge" value="{{$match->type->age}}" type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
+                    <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl"><span  class='w3-right'>محل برگزاری: </span><input name="place" value="{{$match->place}}"  type="text" class="w3-input w3-margin-top border-bottom w3-transparent"></p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom"><p dir="rtl">
                             @if($match->gender=='مرد')
                             <span  class='w3-right w3-select'>جنسیت: </span>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-right'>هزینه: </span>
-                            <input type="text" value={{ $match->price }}  class="w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
+                            <input type="text" value="{{ $match->price }}"  class="w3-input w3-margin-top border-bottom w3-transparent" > </p></div>
                     <div class="w3-col l6 m6 w3-container w3-right w3-margin-bottom">
                         <p dir="rtl"><span  class='w3-btn-block w3-btn j-refree-select-btn w3-round-medium amethyst'>داور</span>
                             <br>
