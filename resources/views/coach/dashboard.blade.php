@@ -34,7 +34,7 @@
             var nn = $(this).val();
             $.get("https://swimming-dp.herokuapp.com/swimmer/get?nn=" + nn, function (data) {
 //                    alert(data.name);
-//                    console.log(data.name);
+                  console.log(data);
 
                 $(".j-response-name").html(data.firstName + " " + data.lastName);
                 $(".j-response-name").show();
