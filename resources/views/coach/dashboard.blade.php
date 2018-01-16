@@ -262,19 +262,19 @@
                           @if(count($all_matches)>0)
                           @foreach($all_matches->all() as $my_match)
                            <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
-                               <div class="w3-card-16  course-item w3-sand w3-show-inline-block">
+                               <div class="w3-card-16  course-item peter-river w3-padding w3-show-inline-block">
                                    <div class="w3-row">
                                        <!--<ul class="w3-ul">-->
-                                       <p class="w3-padding-4"><span>نام مسابقه:</span><span id="comp1-1">{{$my_match->name}}</span></p>
-                                       <p class="w3-padding-4"><span>ماده:</span><span id="comp1-1">{{$my_match->type->name}}</span></p>
-                                       <p class="w3-padding-4"><span>رده سنی:</span><span id="comp1-1">{{$my_match->type->age}}</span></p>
-                                       <p class="w3-padding-4"><span>تاریخ شروع :</span><span>{{$my_match->startDate}}</span></p>
-                                       <p class="w3-padding-4"><span>تاریخ پایان :</span><span></span>{{$my_match->endDate}}</p>
-                                       <p class="w3-padding-4"><span>تاریخ شروع ثبت نام:</span><span>{{$my_match->regStartDate}}</span></p>
-                                       <p class="w3-padding-4"><span>تاریخ پایان ثبت نام:</span><span>{{$my_match->regEndDate}}</span></p>
-                                       <p class="w3-padding-4"><span>محل برگزاری مسابقه:</span><span>{{$my_match->place}}</span></p>
-                                       <p class="w3-padding-4"><span>جنسیت:</span><span>{{$my_match->gender}}</span></p>
-                                       <p class="w3-padding-4"><span>هزینه ثبت نام:</span><span><{{$my_match->price}}/span></p>
+                                       <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->name}}</span><span dir="rtl">نام مسابقه:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->type->name}}</span><span dir="rtl">ماده:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->type->age}}</span><span dir="rtl">رده سنی:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->startDate}}</span><span dir="rtl">تاریخ شروع :</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->endDate}}</span><span dir="rtl">تاریخ پایان :</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->regStartDate}}</span><span dir="rtl">تاریخ شروع ثبت نام:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->regEndDate}}</span><span dir="rtl">تاریخ پایان ثبت نام:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->place}}</span><span dir="rtl">محل برگزاری مسابقه:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->gender}}</span><span dir="rtl">جنسیت:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr"><{{$my_match->price}}/span><span dir="rtl">هزینه ثبت نام:</span></p>
                                        <!--</ul>-->
                                    </div>
                                </div>
@@ -292,19 +292,19 @@
                            @if(count($my_matches)>0)
                            @foreach($my_matches->all() as $my_match)
                             <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
-                                <div class="w3-card-16  course-item w3-sand w3-show-inline-block">
+                                <div class="w3-card-16  course-item peter-river w3-sand w3-show-inline-block">
                                     <div class="w3-row">
                                         <!--<ul class="w3-ul">-->
-                                        <p class="w3-padding-4"><span>نام مسابقه:</span><span id="comp1-1">{{$my_match->name}}</span></p>
-                                        <p class="w3-padding-4"><span>ماده:</span><span id="comp1-1">{{$my_match->type->name}}</span></p>
-                                        <p class="w3-padding-4"><span>رده سنی:</span><span id="comp1-1">{{$my_match->type->age}}</span></p>
-                                        <p class="w3-padding-4"><span>تاریخ شروع :</span><span>{{$my_match->startDate}}</span></p>
-                                        <p class="w3-padding-4"><span>تاریخ پایان :</span><span></span>{{$my_match->endDate}}</p>
-                                        <p class="w3-padding-4"><span>تاریخ شروع ثبت نام:</span><span>{{$my_match->regStartDate}}</span></p>
-                                        <p class="w3-padding-4"><span>تاریخ پایان ثبت نام:</span><span>{{$my_match->regEndDate}}</span></p>
-                                        <p class="w3-padding-4"><span>محل برگزاری مسابقه:</span><span>{{$my_match->place}}</span></p>
-                                        <p class="w3-padding-4"><span>جنسیت:</span><span>{{$my_match->gender}}</span></p>
-                                        <p class="w3-padding-4"><span>هزینه ثبت نام:</span><span><{{$my_match->price}}/span></p>
+                                        <p class="w3-padding-4">><span dir="ltr" id="comp1-1">{{$my_match->name}}</span><span dir="rtl">نام مسابقه:</span</p>
+                                        <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->type->name}}</span><span dir="rtl">ماده:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->type->age}}</span><span dir="rtl">رده سنی:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->startDate}}</span><span dir="rtl">تاریخ شروع :</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->endDate}}</span><span dir="rtl">تاریخ پایان :</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->regStartDate}}</span><span dir="rtl">تاریخ شروع ثبت نام:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->regEndDate}}</span><span dir="rtl">تاریخ پایان ثبت نام:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->place}}</span><span dir="rtl">محل برگزاری مسابقه:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->gender}}</span><span dir="rtl">جنسیت:</span></p>
+                                        <p class="w3-padding-4"><span dir="ltr"><{{$my_match->price}}/span><span dir="rtl">هزینه ثبت نام:</span></p>
                                         <!--</ul>-->
                                     </div>
                                 </div>
