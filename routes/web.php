@@ -45,7 +45,7 @@ Route::middleware('auth')->post('/coach/update','CoachController@update');
 Route::middleware('auth')->post('/coach/createteam','CoachController@createTeam');
 Route::middleware('auth')->post('/coach/addmember','CoachController@addMember');
 Route::middleware('auth')->post('/coach/removemember','CoachController@removeMember');
-Route::middleware('auth')->post('/coach/regmatch/{match}','CoachController@regMatch');
+Route::middleware('auth')->post('/coach/regmatch','CoachController@regMatch');
 
 
 
