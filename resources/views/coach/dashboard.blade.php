@@ -262,7 +262,9 @@
                           @if(count($all_matches)>0)
                           @foreach($all_matches->all() as $my_match)
                            <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
-                               <div class="w3-card-16  course-item peter-river w3-padding w3-show-inline-block">
+                               <form action="/coach/regmatch" method="post">
+                                   <input type="number"  hidden value={{$my_match->id}}>
+                                <div class="w3-card-16  course-item peter-river w3-padding w3-show-inline-block">
                                    <div class="w3-row">
                                        <!--<ul class="w3-ul">-->
                                        <p class="w3-padding-4"><span dir="ltr" id="comp1-1">{{$my_match->name}}</span><span dir="rtl">نام مسابقه:</span></p>
@@ -277,8 +279,9 @@
                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->registrationCost}}</span><span dir="rtl">هزینه ثبت نام:</span></p>
                                        <!--</ul>-->
                                    </div>
-                                   <p onclick="document.getElementById('addSwimmerToMatch').style.display='block'" class="w3-btn w3-btn-block w3-round-medium midnight-blue w3-padding j-participate-btn">شرکت در مسابقه</p>
-                               </div>
+                                        <p  @foreach($my_matches->all() as $mm) @if($mm->id == $my_match->id) hidden @endif  @endforeach type="submit" class="w3-btn w3-btn-block w3-round-medium midnight-blue w3-padding j-participate-btn">شرکت در مسابقه</p>
+                                  </div>
+                               </form>
                            </div>
                            @endforeach
                            @else

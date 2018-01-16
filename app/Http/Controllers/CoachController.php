@@ -150,4 +150,18 @@ class CoachController extends Controller
         }
 
     }
+
+    public function regMatch(Match $match){
+
+        $_user =  auth()->guard('web')->user();
+        $role = $_user->app_role->name;
+        if($role=='coach') {
+
+            $user = User::getUser($_user);
+            $team = Team::where('coach_id',$user->id)->first();
+            $team->matches()->attach($match->id);
+            $team->save();
+            return redirect()->intended('coach/dashboard')->with('status', 'تیم با موفقیت در مسابقه شرکت کرد');
+        }
+    }
 }
