@@ -83,7 +83,7 @@ class SwimmerController extends Controller
    $user->address = $request->input('address');
    $user->fatherName = $request->input('fatherName');
    $user->save();
-   return redirect()->intended('swimmer/dashboard');
+   return redirect()->intended('swimmer/dashboard')->with('status', 'با موفقیت به روز شد');
 
      }
 
