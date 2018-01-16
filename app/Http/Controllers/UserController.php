@@ -52,21 +52,30 @@ class UserController extends Controller
            if ($role->name =='swimmer'){
                if(Auth::attempt(['email' => $email, 'password' => $password])){
                return redirect()->intended('swimmer/dashboard');
-                 }
+                 } else{
+
+                   return redirect()->intended('login');
+               }
               }
           else if ($role->name =='coach'){
                if(Auth::attempt(['email' => $email, 'password' => $password])){
                return redirect()->intended('coach/dashboard');
-                 }
+                 } else {
+
+                   return redirect()->intended('login');
+               }
+
               }
           else if ($role->name =='teacher'){
                if(Auth::attempt(['email' => $email, 'password' => $password])){
                return redirect()->intended('teacher/dashboard');
-                   }
+                   } else {
+                   return redirect()->intended('login');
+               }
               }
         } else{
 
-        return redirect()->intended('login');
+        return redirect()->intended('login')->with('status','نام کاربری  در سامانه وجود ندارد');
 
     }
    }
