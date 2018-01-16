@@ -54,7 +54,7 @@ class UserController extends Controller
                return redirect()->intended('swimmer/dashboard');
                  } else{
 
-                   return redirect()->intended('login');
+                   return redirect()->intended('login')->with('status','گذرواژه نادرست است');
                }
               }
           else if ($role->name =='coach'){
@@ -62,7 +62,7 @@ class UserController extends Controller
                return redirect()->intended('coach/dashboard');
                  } else {
 
-                   return redirect()->intended('login');
+                   return redirect()->intended('login')->with('status','گذرواژه نادرست است');;
                }
 
               }
@@ -70,7 +70,7 @@ class UserController extends Controller
                if(Auth::attempt(['email' => $email, 'password' => $password])){
                return redirect()->intended('teacher/dashboard');
                    } else {
-                   return redirect()->intended('login');
+                   return redirect()->intended('login')->with('status','گذرواژه نادرست است');;
                }
               }
         } else{
