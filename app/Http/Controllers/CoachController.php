@@ -37,7 +37,7 @@ class CoachController extends Controller
       }
       $all_matches = Match::all()->load('type');
       $selected = 'selected';
-      return view('coach.dashboard',compact('team_name','swimmer','email','my_matches','coach_name','team_members'));
+      return view('coach.dashboard',compact('team_name','swimmer','email','my_matches','coach_name','team_members','all_matches'));
     }
   }
   public function update(Request $request){

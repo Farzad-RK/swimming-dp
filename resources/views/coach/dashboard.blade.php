@@ -259,8 +259,8 @@
                     </div>
                     <div id="mainItem1-competitions" style="display: none;">
                         <div id="item3" class="w3-row  ">
-                          @if(count($my_matches)>0)
-                          @foreach($my_matches->all() as $my_match)
+                          @if(count($all_matches)>0)
+                          @foreach($all_matches->all() as $my_match)
                            <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
                                <div class="w3-card-16  course-item w3-sand w3-show-inline-block">
                                    <div class="w3-row">
@@ -521,7 +521,7 @@
             <p>آیا از حذف مورد انتخاب شده مطمئن هستید؟</p>
             <p>
 
-                    <input type="submit" class="w3-btn w3-red w3-margin w3-round">بله</input>
+                    <input type="submit" class="w3-btn w3-red w3-margin w3-round" value="بله">
 
                 <span class="w3-btn w3-green w3-margin w3-round" id="close-remove-modal">خیر</span>
 
