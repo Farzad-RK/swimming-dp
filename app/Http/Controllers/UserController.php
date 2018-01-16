@@ -64,7 +64,11 @@ class UserController extends Controller
                return redirect()->intended('teacher/dashboard');
                    }
               }
-        }
+        } else{
+
+        return redirect()->intended('login');
+
+    }
    }
 
     public function create(Request $request){
