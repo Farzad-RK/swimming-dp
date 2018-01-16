@@ -63,6 +63,8 @@
 
         $(".j-remove-swimmer-from-team").click(function () {
             $("#remove-modal").fadeIn();
+            var a = $(this).closest(".j-swimmer-id");
+            alert(a);
         });
 
         $("#close-remove-modal").click(function () {
@@ -221,8 +223,9 @@
                                         <ul class="w3-ul">
                                             @foreach($team_members->all() as $member)
                                             <li class="w3-padding-hor-16">
-                                                <span>{{$member->firstName}}&nbsp;{{$member->lastName}}</span>
+                                            <span>{{$member->firstName}}&nbsp;{{$member->lastName}}</span>
                                                 <span  class="j-remove-swimmer-from-team w3-btn w3-left w3-round-medium midnight-blue w3-large w3-padding" style="margin-top: -10px;">×</span>
+                                                <span style="display: none;" class="j-swimmer-id">{{$member->id}}</span>
                                             </li>
                                             @endforeach
                                         </ul>
@@ -505,6 +508,25 @@
         </footer>
     </div>
 </div>
+
+<div id="remove-modal" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4"  style="width: 500px;">
+        <header class="w3-container midnight-blue w3-center">
+            <h3>حذف</h3>
+        </header>
+        <div class="w3-container w3-center w3-padding-hor-16">
+            <p>آیا از حذف مورد انتخاب شده مطمئن هستید؟</p>
+            <p>
+                <a>
+                    <span class="w3-btn w3-red w3-margin w3-round">بله</span>
+                </a>
+                <span class="w3-btn w3-green w3-margin w3-round" id="close-remove-modal">خیر</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
 <script>
     function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";

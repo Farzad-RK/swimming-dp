@@ -47,6 +47,7 @@ Route::middleware('auth')->post('/coach/addmember','CoachController@addMember');
 
 
 
+
 Route::get('/' , function(){
 
      return view('main.index');
