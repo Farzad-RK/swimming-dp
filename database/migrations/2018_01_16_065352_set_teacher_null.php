@@ -14,7 +14,10 @@ class SetTeacherNull extends Migration
     public function up()
     {
         Schema::table('courses', function($table) {
-            $table->integer('teacher_id')->nullable();
+
+            $table->softDeletes();
+            $table->integer('teacher_id')->->nullable()->unsigned();
+            $table->foreign('teacher_id')->references('id')->on('teachers');
         });
     }
 

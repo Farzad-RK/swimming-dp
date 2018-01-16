@@ -28,12 +28,6 @@ class CreateCoursesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('courses', function($table) {
-            $table->softDeletes();
-            $table->integer('teacher_id')->unsigned();
-            $table->foreign('teacher_id')->references('id')->on('teachers');
-
-        });
     }
 
     /**
