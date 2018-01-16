@@ -200,7 +200,6 @@
                                                 <p class="w3-padding-4"><span>تاریخ پایان دوره:</span><span>{{$my_course->endDate}}</span></p>
                                                 <p class="w3-padding-4"><span>محل کلاس:</span><span>{{$my_course->place}}</span></p>
                                                 <p class="w3-padding-4"><span>جنسیت:</span><span>{{$my_course->gender}}</span></p>
-                                                <p class="w3-padding-4"><span>نام مربی دوره:</span><span>{{$my_course->teacher->firstName}}&nbsp;{{$my_course->teacher->lastName}}</span></p>
                                                 <p class="w3-padding-4"><span>نوع دوره:</span><span>{{$my_course->type}}</span></p>
                                                 <p class="w3-padding-4"><span>هزینه دوره:</span><span>{{$my_course->fee}}</span></p>
                                                 <p class="w3-padding-4"><span>ظرفیت (نفر):</span><span></span>{{$my_course->capacity}}</p>
