@@ -274,7 +274,7 @@
                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->regEndDate}}</span><span dir="rtl">تاریخ پایان ثبت نام:</span></p>
                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->place}}</span><span dir="rtl">محل برگزاری مسابقه:</span></p>
                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->gender}}</span><span dir="rtl">جنسیت:</span></p>
-                                       <p class="w3-padding-4"><span dir="ltr"><{{$my_match->registrationCost}}/span><span dir="rtl">هزینه ثبت نام:</span></p>
+                                       <p class="w3-padding-4"><span dir="ltr">{{$my_match->registrationCost}}</span><span dir="rtl">هزینه ثبت نام:</span></p>
                                        <!--</ul>-->
                                    </div>
                                    <p onclick="document.getElementById('addSwimmerToMatch').style.display='block'" class="w3-btn w3-btn-block w3-round-medium midnight-blue w3-padding j-participate-btn">شرکت در مسابقه</p>
