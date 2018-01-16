@@ -40,7 +40,7 @@ class SwimmerController extends Controller
        if($swimmer->team!=null){
          $team = $swimmer->team;
          $my_matches=$team->matches->load('type');
-         $team_members= Swimmer::where('team_id',$team->id)->get;
+         $team_members= Swimmer::where('team_id',$team->id)->get();
          $team_name =$team->name;
          $coach_name =$team->coach->firstName." ".$team->coach->firstName;
        } else {
