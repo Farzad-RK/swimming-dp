@@ -135,7 +135,7 @@
                         <div id="item1" class="w3-row  ">
 
                           @if(count($all_courses))
-                             @foreach($all_courses->all() as $course)
+                             @foreach($all_courses->all() as $my_course)
                                <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
                                    <div class="w3-card-16 course-item  w3-show-inline-block w3-sand">
                                        <div class="w3-row">
