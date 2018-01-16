@@ -63,7 +63,7 @@
 
         $(".j-remove-swimmer-from-team").click(function () {
             $("#remove-modal").fadeIn();
-            var a = $(this).closest(".j-swimmer-id");
+            var a = $(this).closest(".j-swimmer-id").text();
             alert(a);
         });
 
