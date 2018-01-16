@@ -231,7 +231,7 @@
                           @if(count($my_matches)>0)
                           @foreach($my_matches->all() as $my_match)
                            <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
-                               <div class="w3-card-16  course-item w3-sand w3-show-inline-block">
+                               <div class="w3-card-16  course-item w3-padding w3-sand w3-show-inline-block">
                                    <div class="w3-row">
                                        <!--<ul class="w3-ul">-->
                                        <p class="w3-padding-4"><span>نام مسابقه:</span><span id="comp1-1">{{$my_match->name}}</span></p>
