@@ -263,6 +263,7 @@
                           @foreach($all_matches->all() as $my_match)
                            <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
                                <form action="/coach/regmatch" method="post">
+                                   {{ csrf_field() }}
                                    <input type="number"  hidden value={{$my_match->id}}>
                                 <div class="w3-card-16  course-item peter-river w3-padding w3-show-inline-block">
                                    <div class="w3-row">
