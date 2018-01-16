@@ -188,7 +188,32 @@
                     <div id="mainItem1-available-courses">
                         <div id="item1" class="w3-row  ">
 
-                              <h4 class="w3-center" dir="rtl">هیچ دوره ای اريه نشده است</h4>
+                            @if(count($all_courses))
+                                @foreach($all_courses->all() as $course)
+                                    <div class="w3-col l4  w3-right w3-center margin-bottom-custom">
+                                        <div class="w3-card-16 course-item  w3-show-inline-block w3-sand">
+                                            <div class="w3-row">
+                                                <!--<ul class="w3-ul">-->
+                                                <p class="w3-padding-4"><span>نام دوره:</span><span>{{$my_course->name}}</span></p>
+                                                <p class="w3-padding-4"><span>کد دوره:</span><span></span>{{$my_course->code}}</p>
+                                                <p class="w3-padding-4"><span>تاریخ شروع دوره:</span><span>{{$my_course->startDate}}</span></p>
+                                                <p class="w3-padding-4"><span>تاریخ پایان دوره:</span><span>{{$my_course->endDate}}</span></p>
+                                                <p class="w3-padding-4"><span>محل کلاس:</span><span>{{$my_course->place}}</span></p>
+                                                <p class="w3-padding-4"><span>جنسیت:</span><span>{{$my_course->gender}}</span></p>
+                                                <p class="w3-padding-4"><span>نام مربی دوره:</span><span>{{$my_course->teacher->firstName}}&nbsp;{{$my_course->teacher->lastName}}</span></p>
+                                                <p class="w3-padding-4"><span>نوع دوره:</span><span>{{$my_course->type}}</span></p>
+                                                <p class="w3-padding-4"><span>هزینه دوره:</span><span>{{$my_course->fee}}</span></p>
+                                                <p class="w3-padding-4"><span>ظرفیت (نفر):</span><span></span>{{$my_course->capacity}}</p>
+                                                <!--</ul>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
+
+                                <h4 class="w3-center" dir="rtl">هیچ دوره ای ارايه نشده است</h4>
+
+                            @endif
 
                         </div>
                     </div>

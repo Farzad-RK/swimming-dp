@@ -20,6 +20,7 @@ class CoachController extends Controller
     if($role=='coach'){
       $swimmer = User::getUser($_user);
       $email =$_user->email;
+      $all_courses = Course::all()->load('teacher');
       if($swimmer->team!=null){
         $team = Team::where('coach_id',$swimmer->id)->first();
         $swimmer =$team->coach;
@@ -37,7 +38,7 @@ class CoachController extends Controller
       }
       $all_matches = Match::all()->load('type');
       $selected = 'selected';
-      return view('coach.dashboard',compact('team_name','swimmer','email','my_matches','coach_name','team_members','all_matches'));
+      return view('coach.dashboard',compact('team_name','swimmer','email','my_matches','coach_name','team_members','all_matches','all_courses'));
     }
   }
   public function update(Request $request){

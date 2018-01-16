@@ -157,7 +157,7 @@
                               @endforeach
                               @else
 
-                              <h4 class="w3-center" dir="rtl">هیچ دوره ای اريه نشده است</h4>
+                              <h4 class="w3-center" dir="rtl">هیچ دوره ای ارايه نشده است</h4>
 
                               @endif
                         </div>
