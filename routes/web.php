@@ -44,7 +44,7 @@ Route::middleware('auth')->get('/coach/logout','CoachController@logout');
 Route::middleware('auth')->post('/coach/update','CoachController@update');
 Route::middleware('auth')->post('/coach/createteam','CoachController@createTeam');
 Route::middleware('auth')->post('/coach/addmember','CoachController@addMember');
-
+Route::middleware('auth')->post('/coach/removemember','CoachController@removeMember');
 
 
 

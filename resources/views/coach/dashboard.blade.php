@@ -64,7 +64,7 @@
         $(".j-remove-swimmer-from-team").click(function () {
             $("#remove-modal").fadeIn();
             var a = $(this).siblings(".j-swimmer-id").text();
-            alert(a);
+            $("#j-swimmer-id-remove").val(a);
         });
 
         $("#close-remove-modal").click(function () {
@@ -510,6 +510,9 @@
 </div>
 
 <div id="remove-modal" class="w3-modal w3-animate-opacity">
+    <form action="/coach/removemember" method="post">
+        {{csrf_field()}}
+    <input id="j-swimmer-id-remove" hidden name="id">
     <div class="w3-modal-content w3-card-4"  style="width: 500px;">
         <header class="w3-container midnight-blue w3-center">
             <h3>حذف</h3>
@@ -517,13 +520,16 @@
         <div class="w3-container w3-center w3-padding-hor-16">
             <p>آیا از حذف مورد انتخاب شده مطمئن هستید؟</p>
             <p>
-                <a>
-                    <span class="w3-btn w3-red w3-margin w3-round">بله</span>
-                </a>
+
+                    <input type="submit" class="w3-btn w3-red w3-margin w3-round">بله</input>
+
                 <span class="w3-btn w3-green w3-margin w3-round" id="close-remove-modal">خیر</span>
+
             </p>
+
         </div>
     </div>
+    </form>
 </div>
 
 

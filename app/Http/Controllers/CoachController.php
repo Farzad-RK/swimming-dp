@@ -124,4 +124,30 @@ class CoachController extends Controller
       }
 
   }
+    public function removeMember(Request $request){
+        $_user =  auth()->guard('web')->user();
+        $role = $_user->app_role->name;
+        if($role=='coach') {
+            $user = User::getUser($_user);
+            $this->validate($request, [
+
+                'id' => 'required'
+            ]);
+            $id = $request->input('id');
+            $swimmer = Swimmer::find($id);
+            if($swimmer!=null){
+                $team = Team::where('coach_id',$user->id)->first();
+                if($swimmer->id==$team->id){
+
+                    $swimmer->team_id=null;
+                    $swimmer->save();
+                }
+                return redirect()->intended('coach/dashboard')->with('status', 'شناگر از تیم حذف شد ');
+            } else{
+
+                return redirect()->intended('coach/dashboard')->with('status', 'شناگری با این مشخصات وجود ندارد');
+            }
+        }
+
+    }
 }
