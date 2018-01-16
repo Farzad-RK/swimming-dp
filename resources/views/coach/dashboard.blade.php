@@ -479,11 +479,11 @@
             <p class="w3-xlarge">افزودن شناگر به تیم</p>
         </header>
         <div class="w3-container w3-padding-hor-8 ">
-            <form id="addMatchType"  class="w3-container">
-
+            <form id="addMatchType" action="/coach/addmember" method="post" class="w3-container">
+                {{ csrf_field() }}
                 <label>شماره ملی شناگر</label>
                 <br>
-                <input  dir="rtl" name="type_name" class="w3-input  w3-right j-swimmer-national-code-input" type="text" style="width:50%; border-bottom: 2px solid #9b59b6!important;">
+                <input  dir="rtl" name="nn" class="w3-input  w3-right j-swimmer-national-code-input" type="text" style="width:50%; border-bottom: 2px solid #9b59b6!important;">
                 <span class="w3-right " style="width: 40px;">&nbsp;<i class="fa fa-spinner fa-2x j-loading-icon "  style="margin-top: 5px; display: none;" aria-hidden="true"></i></span>
                 <br>
                 <br>

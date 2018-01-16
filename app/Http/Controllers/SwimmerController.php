@@ -92,7 +92,7 @@ class SwimmerController extends Controller
    public function getSwimmer(Request $request){
         //national number
         $nn = $request->input('nn');
-        $swimmer = Swimmer::where('nationalNumber',$nn)->first();
+        $swimmer = Swimmer::where('nationalNumber',$nn)->doesnthave('team')->first();
         if($swimmer!=null){
 
             return $swimmer;

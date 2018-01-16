@@ -100,4 +100,28 @@ class CoachController extends Controller
       }
 
   }
+
+  public function addMember(Request $request){
+      $_user =  auth()->guard('web')->user();
+      $role = $_user->app_role->name;
+      if($role=='coach') {
+          $user = User::getUser($_user);
+          $this->validate($request, [
+
+              'nn' => 'required'
+          ]);
+          $nn = $request->input('nn');
+          $swimmer = Swimmer::where('nationalNumber',$nn)->first();
+          if($swimmer!=null){
+              $team = Team::where('coach_id',$user->id)->first();
+              $swimmer->team_id =$team->id;
+              $swimmer->save();
+              return redirect()->intended('coach/dashboard')->with('status', 'شناگر با موفقیت به تیم اضافه شد');
+          } else{
+
+              return redirect()->intended('coach/dashboard')->with('status', 'شناگری با این کد ملی وجود ندارد');
+          }
+      }
+
+  }
 }
