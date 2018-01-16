@@ -50,7 +50,7 @@ class RefreeController extends Controller
       if ($role =='refree'){
       $user = User::getUser($_user);
       $nationalNumber =$request->input('nationalNumber');
-      $match = $request->input('matchId');
+      $match =(int) $request->input('matchId');
       $swimmer = Swimmer::where('nationalNumber',$nationalNumber)->first();
       if($swimmer==null){
 
