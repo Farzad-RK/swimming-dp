@@ -56,7 +56,7 @@
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
     <a href="#band" class="w3-bar-item w3-button w3-padding-large">خانه</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large">ثبت نام و ورود</a>
+    <a href="/login" class="w3-bar-item w3-button w3-padding-large">ثبت نام و ورود</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large">ارتباط با هیئت</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">مشاهده اخبار</a>
 </div>
