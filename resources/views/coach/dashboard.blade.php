@@ -280,7 +280,7 @@
                                        <p class="w3-padding-4"><span dir="ltr">{{$my_match->registrationCost}}</span><span dir="rtl">هزینه ثبت نام:</span></p>
                                        <!--</ul>-->
                                    </div>
-                                        <button  @foreach($my_matches->all() as $mm) @if($mm->id == $my_match->id) hidden @endif  @endforeach type="submit" class="w3-btn w3-btn-block w3-round-medium midnight-blue w3-padding j-participate-btn">شرکت در مسابقه</button>
+                                        <button  @foreach($my_matches->all() as $mm) @if($mm->id == $my_match->id) style="display: none" @endif  @endforeach type="submit" class="w3-btn w3-btn-block w3-round-medium midnight-blue w3-padding j-participate-btn">شرکت در مسابقه</button>
                                   </div>
                                </form>
                            </div>
