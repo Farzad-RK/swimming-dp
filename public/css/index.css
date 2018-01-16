@@ -1,0 +1,15 @@
+
+body {font-family: "yekan";}
+body h2, p{
+    font-family: "yekan";
+}
+.mySlides {display: none;}
+@font-face{
+    font-family: "yekan";
+    src:url("../fonts/yekan.eot");
+    src:url("../fonts/yekan.eot#iefix") format("embedded-opentype"),
+    url("../fonts/yekan.woff") format("woff"),
+    url("../fonts/yekan.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}

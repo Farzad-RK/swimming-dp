@@ -8,29 +8,8 @@
 <link rel="stylesheet" href="{{ asset('/awesome/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/w3.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
 <link rel="stylesheet" href="{{ asset('/css/kamadatepicker.css') }}">
-<style>
-   {!!
-
-     body {font-family: "yekan";}
-     body h2, p{
-         font-family: "yekan";
-     }
-     .mySlides {display: none;}
-     @font-face{
-         font-family: "yekan";
-         src:url("fonts/yekan.eot");
-         src:url("fonts/yekan.eot#iefix") format("embedded-opentype"),
-         url("fonts/yekan.woff") format("woff"),
-         url("fonts/yekan.ttf") format("truetype");
-         font-weight:normal;
-         font-style:normal;
-     }
-
-
-     !!}
-
-</style>
 <body>
 
 <!-- Navbar -->
